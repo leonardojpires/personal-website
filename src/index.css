@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
-#root {
-  @apply flex flex-col items-center justify-center min-h-screen p-4 bg-gray-200 text-white;
+:root {
+  /* COLOR VARIABLES */
+  --color-primary: #4F46E5; /* Primary actions, highlights */
+  --color-secondary: #06B6D4; /* Accent, complementary actions */
+  --dark: #0F172A; /* Dark sections, text */
+  --light: #F8FAFC; /* Page background */
+
+  --gray-900: #111827; /* Main text */
+  --gray-700: #374151; /* Secondary text */
+  --gray-500: #64748B; /* Tertiary text, disabled states */
+  --gray-200: #E5E7EB; /* Borders, dividers */
+  --gray-50: #F9FAFB; /* Subtle backgrounds */
+
+  --color-purple: #8B5CF6; /* Accent */
+  --color-rose: #F43F5E; /* Accent */
+  --color-emerald: #10B981; /* Success states */
+  --color-amber: #F59E0B; /* Warning states */
+
+  --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%); /* Hero Gradient */
+  --gradient-text: linear-gradient(90deg, #4f46e5, #06b6d4); /* Text Gradient */
+
+  /* FONT VARIABLES */
+  --font-headline: "Bricolage Grotesque", sans-serif;
+  --font-body: "Bricolage Grotesque", sans-serif;
 }
