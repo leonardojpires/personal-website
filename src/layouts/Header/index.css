@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+.header {
+    @apply fixed top-0 left-0 right-0 flex justify-evenly items-center py-5 px-4 lg:justify-evenly backdrop-blur-xl bg-[var(--gray-50)]/90 border-b border-white/20 dark:border-white/10 z-50 shadow-md
+}
+
+.menu-button {
+    @apply flex items-center md:hidden font-bold text-2xl text-[var(--gray-900)] cursor-pointer transition-colors duration-200;
+}
+
+.nav-links {
+    @apply relative w-auto font-semibold text-transparent bg-clip-text bg-[var(--gray-900)] transition-colors duration-200;
+}
+
+.nav-links:hover {
+    @apply bg-[var(--color-primary)] ;
+}
+
+.nav-links::before {
+    @apply content-[''] absolute top-[100%] left-0 w-full h-[2px] bg-[var(--color-primary)] scale-x-0 origin-left transition-transform duration-300 ease-in-out;
+}
+
+.nav-links:hover::before {
+    @apply scale-x-100;
+}
+
+.nav-links-contact {
+    @apply font-semibold text-[var(--gray-50)] bg-[var(--color-primary)] px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out;
+}
+
+.nav-links-contact:hover {
+    @apply translate-y-[-2px] shadow-md;
+}
+

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-headline: "Space Mono", monospace;
+  --font-body: "Sora", sans-serif;
+}
+
 :root {
   /* COLOR VARIABLES */
   --color-primary: #4F46E5; /* Primary actions, highlights */
@@ -20,8 +25,4 @@
 
   --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%); /* Hero Gradient */
   --gradient-text: linear-gradient(90deg, #4f46e5, #06b6d4); /* Text Gradient */
-
-  /* FONT VARIABLES */
-  --font-headline: "Bricolage Grotesque", sans-serif;
-  --font-body: "Bricolage Grotesque", sans-serif;
 }
