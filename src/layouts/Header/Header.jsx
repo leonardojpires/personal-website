@@ -47,8 +47,8 @@ export default function Header() {
       </nav>
       {/* ---- Mobile Menu ---- */}
       {isMenuOpen && (
-        <div className="absolute w-[320px] flex top-[73px] right-0 bg-[var(--gray-50)]/95 backdrop-blur-lg transition-opacity duration-300 ease-in-out p-4 shadow-xl md:hidden">
-          <div className="w-full flex flex-col items-start gap-7 mt-4 font-body">
+        <div className="mobile-menu">
+          <div className="font-body">
             <a href="#work" className="nav-links flex items-center gap-2">
               <MdOutlineWorkOutline size={20} className="text-[var(--gray-900)]" /> Work
             </a>
@@ -58,7 +58,7 @@ export default function Header() {
             <a href="#skills" className="nav-links flex items-center gap-2">
               <IoBookOutline size={20} className="text-[var(--gray-900)]" /> Skills
             </a>
-            <a href="#contact" className="relative w-full flex justify-center items-center gap-2 font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-md">
+            <a href="#contact" className="relative w-full flex justify-center items-center gap-2 font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2">
               Get in touch
             </a>
           </div>

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.hero-section {
+    @apply w-[1200px] flex flex-col md:flex-row md:items-center md:gap-20;
+}
+
+.hero-buttons {
+    @apply flex flex-row gap-5 mt-10;
+}
+
+.hero-buttons > button:first-child {
+    @apply bg-(--color-primary) px-6 py-4 rounded-lg cursor-pointer transition-transform duration-300 ease-in-out;
+}
+
+.hero-buttons > button:last-child {
+    @apply bg-transparent border-2 border-(--gray-900) text-(--gray-900) px-6 py-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out;
+}
+
+.hero-buttons > button:first-child:hover {
+    @apply translate-y-[-3px] shadow-md;
+}
+
+.hero-buttons > button:last-child:hover {
+    @apply translate-y-[-3px] shadow-md bg-(--gray-900) text-(--gray-50);
+}

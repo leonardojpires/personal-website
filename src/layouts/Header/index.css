@@ -32,3 +32,10 @@
     @apply translate-y-[-2px] shadow-md;
 }
 
+.mobile-menu {
+    @apply absolute w-full sm:w-[320px] flex top-[73px] right-0 bg-[var(--gray-50)]/95 backdrop-blur-lg transition-opacity duration-300 ease-in-out p-4 shadow-xl md:hidden
+}
+
+.mobile-menu > div {
+    @apply w-full flex flex-col items-start gap-7 mt-4;
+}
