@@ -3,7 +3,7 @@ import personalImage from "../../../public/imgs/hero/personal_picture.png";
 
 export default function Hero() {
     return (
-        <section className="pt-30 bg-linear-to-t from-(--light) to-(--color-secondary)/20 flex justify-center min-h-screen">
+        <section className="pt-30 bg-linear-to-t from-(--gray-50) to-(--color-secondary)/10 flex justify-center min-h-screen">
             <div className="hero-section">
                 <div className="w-full md:w-1/2">
                     <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body">Fullstack Web Developer & Code Enthusiast</span>
