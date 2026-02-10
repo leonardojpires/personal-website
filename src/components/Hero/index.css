@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .hero-section {
-    @apply w-[1200px] flex flex-col md:flex-row md:items-center md:gap-20;
+    @apply relative w-[1200px] flex flex-col md:flex-row md:items-center md:gap-20;
 }
 
 .hero-buttons {
@@ -22,4 +22,8 @@
 
 .hero-buttons > button:last-child:hover {
     @apply translate-y-[-3px] shadow-md bg-(--gray-900) text-(--gray-50);
+}
+
+.hero-image {
+    @apply absolute bottom-0 right-0;
 }
