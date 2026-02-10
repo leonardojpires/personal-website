@@ -5,7 +5,7 @@
 }
 
 .hero-buttons {
-    @apply flex flex-row gap-5 mt-10;
+    @apply flex flex-row justify-center sm:justify-start gap-5 mt-10;
 }
 
 .hero-buttons > button:first-child {
@@ -25,5 +25,5 @@
 }
 
 .hero-image {
-    @apply absolute bottom-0 right-0;
+    @apply md:w-[400px] lg:w-125 md:absolute bottom-0 right-0;
 }
