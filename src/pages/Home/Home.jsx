@@ -1,6 +1,7 @@
+import FeaturedProject from "../../layouts/Featured Projects/FeaturedProjects";
+import Hero from "../../layouts/Hero/Hero";
 import "./index.css";
-import Hero from "../../components/Hero/Hero";
-import FeaturedProject from './../../components/Featured Projects/FeaturedProjects';
+
 
 export default function Home() {
     return (

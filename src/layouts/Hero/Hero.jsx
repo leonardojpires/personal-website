@@ -1,6 +1,6 @@
 import "./index.css";
 import personalImage from "../../../public/imgs/hero/personal_picture.png";
-import HeroCards from "./../Hero Cards/HeroCards";
+import HeroCards from "../../components/Hero Cards/HeroCards";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaBookBookmark } from "react-icons/fa6";
 
