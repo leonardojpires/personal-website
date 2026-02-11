@@ -9,7 +9,7 @@
 }
 
 .hero-buttons > button:first-child {
-    @apply bg-(--color-primary) px-6 py-4 rounded-lg cursor-pointer transition-transform duration-300 ease-in-out;
+    @apply bg-(--color-primary) text-(--gray-50) px-6 py-4 rounded-lg cursor-pointer transition-transform duration-300 ease-in-out;
 }
 
 .hero-buttons > button:last-child {
