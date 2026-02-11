@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+.featured-projects-section {
+    @apply flex flex-col items-center justify-center mt-20 py-12 bg-gray-100;
+}
+
+.featured-projects-title {
+    @apply text-3xl text-(--gray-900) font-bold mb-8;
+}
+
+.featured-projects-container {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl;
+}
+
+.featured-project-card {
+    @apply bg-(--gray-50)/90 backdrop-blur-2xl rounded-lg shadow-md overflow-hidden;
+}
+
+.featured-project-card:hover {
+    @apply shadow-lg cursor-pointer;
+}
+
+.featured-project-image {
+    @apply relative w-full object-cover overflow-hidden;
+}
+
+.featured-project-image img {
+    @apply w-full h-full transition-transform duration-300 ease-out;
+}
+
+.featured-project-card:hover .featured-project-image img {
+    @apply scale-110;
+}
+
+.featured-project-overlay {
+    @apply absolute inset-0 bg-(--gray-900)/80 backdrop-blur-sm opacity-0 transition-opacity flex items-center justify-center p-4 cursor-pointer;
+}
+
+.featured-project-card:hover .featured-project-overlay {
+    @apply opacity-100;
+}
+
+
+.featured-project-overlay > a {
+    @apply text-[16px] bg-(--gray-50) px-4 py-2 rounded-md text-(--gray-900) font-semibold hover:bg-(--gray-200) transition-colors;
+}
+
+.featured-project-content {
+    @apply flex flex-col p-6;
+}
+
+.featured-project-type-container {
+    @apply bg-(--color-primary)/10 border border-(--color-primary)/20 inline-block px-3 py-0.5 rounded-md mb-4;
+}
+
+.featured-project-type {
+    @apply font-bold text-[11px] text-(--color-primary) uppercase tracking-wide mb-2;
+}
+
+.featured-project-title {
+    @apply text-xl text-(--gray-900) font-bold mb-4;
+}
+
+.featured-project-description {
+    @apply text-sm text-(--gray-500) mb-6
+}
+.featured-project-technologies {
+    @apply flex flex-wrap gap-2
+}
+
+.featured-project-technology {
+    @apply text-xs text-(--gray-700) bg-(--gray-200)/80 px-2 py-1 rounded-md
+}
