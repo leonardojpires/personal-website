@@ -1,10 +1,10 @@
 import "./index.css";
 
-export default function FeaturedProjectCard() {
+export default function FeaturedProjectCard({ id, type, title, description, technologies, image }) {
   return (
     <div className="featured-project-card">
       <div className="featured-project-image">
-        <img src="https://placehold.co/600x250" alt="" />
+        <img src={image} alt={title} />
         <div className="featured-project-overlay">
           <a href="#">View Project</a>
         </div>
@@ -12,21 +12,14 @@ export default function FeaturedProjectCard() {
 
       <div className="featured-project-content">
         <div className="featured-project-type-container">
-          <span className="featured-project-type font-body">Project Type</span>
+          <span className="featured-project-type font-body">{type}</span>
         </div>
-        <h3 className="featured-project-title font-headline">Project Title</h3>
-        <p className="featured-project-description font-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          architecto cumque nemo nulla sint temporibus officiis aliquid
-          asperiores dignissimos doloremque eaque odio minima voluptatum
-          tempora, ex magni. Vero, aliquam in!
-        </p>
+        <h3 className="featured-project-title font-headline">{title}</h3>
+        <p className="featured-project-description font-body">{description}</p>
         <div className="featured-project-technologies font-body">
-          <span className="featured-project-technology">React.js</span>
-          <span className="featured-project-technology">Node.js</span>
-          <span className="featured-project-technology">Express</span>
-          <span className="featured-project-technology">MySQL</span>
-          <span className="featured-project-technology">Sequelize</span>
+            {technologies.map((tech) => (
+                <span key={id} className="featured-project-technology">{tech}</span>
+            ))}
         </div>
       </div>
     </div>

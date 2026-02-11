@@ -9,11 +9,11 @@
 }
 
 .featured-project-image {
-    @apply relative w-full object-cover overflow-hidden;
+    @apply relative w-full h-64 overflow-hidden flex items-center justify-center;
 }
 
 .featured-project-image img {
-    @apply w-full h-full transition-transform duration-300 ease-out;
+    @apply w-full h-full object-cover object-center transition-transform duration-300 ease-out;
 }
 
 .featured-project-card:hover .featured-project-image img {

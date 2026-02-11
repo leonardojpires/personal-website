@@ -9,10 +9,9 @@ export default function FeaturedProject() {
             <h2 className="featured-projects-title font-headline">Featured Projects</h2>
 
             <div className="featured-projects-container">
-                <FeaturedProjectCard />
-                <FeaturedProjectCard />
-                <FeaturedProjectCard />
-                <FeaturedProjectCard />
+                {projectsData.map((project, index) => (
+                    <FeaturedProjectCard key={index} {...project} />
+                ))}
             </div>
         </section>
     )
