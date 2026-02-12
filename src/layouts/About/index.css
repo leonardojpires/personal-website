@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.about-section {
+    @apply flex flex-col items-center justify-center mt-20 py-12 bg-gray-100;
+}
+
+.about-container {
+    @apply flex flex-col items-center justify-center;
+}
+
+.about-title {
+    @apply text-3xl text-(--gray-900) font-bold mb-8;;
+}
+
+.about-subtitle {
+    @apply text-2xl text-(--gray-900) font-semibold mb-4;
+}
+
+.about-description {
+    @apply text-lg text-(--gray-700) max-w-2xl text-center mb-8;
+}
+
+.about-skills {
+    @apply flex flex-wrap flex-row justify-center items-stretch gap-7;
+}
