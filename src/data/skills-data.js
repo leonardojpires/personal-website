@@ -20,11 +20,11 @@ const skillsData = [
         icon: FaDatabase,
         title: "Database",
         skills: ["MySQL & Sequelize", "MongoDB", "Firebase"]
-    },
+    },  
     {
         id: 4,
         icon: FaCloud,
-        title: "Version Control & Deployment",
+        title: "DevOps",
         skills: ["Git & GitHub", "Vercel & InfinityFree", "Docker", "CI/CD Pipelines"]
     },
     {
