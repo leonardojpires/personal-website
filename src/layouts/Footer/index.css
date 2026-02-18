@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+.footer {
+  @apply relative mt-20 pt-12 pb-8 text-(--gray-900);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.8) 0%, rgba(240, 249, 255, 0.6) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-gradient-bg {
+  @apply absolute inset-0 pointer-events-none;
+  background: radial-gradient(circle at 20% 50%, rgba(79, 70, 229, 0.05) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.footer-container {
+  @apply relative z-10 max-w-[1200px] mx-auto px-4 md:px-10;
+}
+
+/* Top Section - Brand & Navigation */
+.footer-top {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8;
+}
+
+.footer-brand {
+  @apply flex flex-col gap-2 md:col-span-1;
+}
+
+.footer-logo {
+  @apply text-xl font-bold text-transparent bg-clip-text;
+  background-image: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-tagline {
+  @apply text-(--gray-600) text-xs md:text-sm;
+}
+
+/* Links Section */
+.footer-links {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-6 md:col-span-3;
+}
+
+.footer-links-column {
+  @apply flex flex-col gap-3;
+}
+
+.footer-column-title {
+  @apply text-sm font-bold text-(--gray-900) uppercase tracking-wide;
+  letter-spacing: 0.05em;
+}
+
+.footer-links-list {
+  @apply flex flex-col gap-2 list-none;
+}
+
+.footer-link {
+  @apply text-(--gray-600) text-sm hover:text-(--color-primary) transition-all duration-300 relative;
+  text-decoration: none;
+}
+
+.footer-link::before {
+  @apply absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full -translate-x-1 transition-all duration-300;
+  background: var(--color-primary);
+  opacity: 0;
+}
+
+.footer-link:hover::before {
+  @apply translate-x-0;
+  opacity: 1;
+}
+
+.footer-link:hover {
+  @apply translate-x-1;
+}
+
+/* Divider */
+.footer-divider {
+  @apply my-8 h-px;
+  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.2), transparent);
+}
+
+/* Bottom Section - Copyright & Socials */
+.footer-bottom {
+  @apply flex flex-col md:flex-row md:items-center md:justify-between gap-6;
+}
+
+.footer-copyright {
+  @apply text-(--gray-500) text-xs md:text-sm text-center md:text-left;
+}
+
+.footer-socials {
+  @apply flex gap-3 justify-center md:justify-end;
+}
+
+.social-link {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center text-(--gray-600) transition-all duration-300 relative;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.social-link:hover {
+  @apply text-(--gray-50) translate-y-[-4px];
+  background: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .footer {
+    @apply pt-10 pb-6;
+  }
+
+  .footer-container {
+    @apply px-4;
+  }
+
+  .footer-top {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .footer-links {
+    @apply col-span-1 grid-cols-2;
+  }
+
+  .footer-divider {
+    @apply my-6;
+  }
+
+  .footer-bottom {
+    @apply gap-4;
+  }
+
+  .footer-copyright {
+    @apply text-xs;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-brand {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.footer-links-column {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.footer-bottom {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}

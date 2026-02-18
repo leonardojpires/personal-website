@@ -5,7 +5,7 @@ import FeaturedProjectCard from './../../components/FeaturedProjectCard/Featured
 
 export default function FeaturedProject() {
     return (
-        <section className="featured-projects-section">
+        <section id="featured-projects" className="featured-projects-section">
             <h2 className="featured-projects-title font-headline">Featured Projects</h2>
 
             <div className="featured-projects-container">

@@ -26,3 +26,7 @@
   --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #008dea 100%); /* Hero Gradient */
   --gradient-text: linear-gradient(90deg, #4f46e5, #06b6d4); /* Text Gradient */
 }
+
+html {
+  scroll-behavior: smooth;
+}
