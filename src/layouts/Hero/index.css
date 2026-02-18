@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .hero-section {
-    @apply relative w-[1200px] flex flex-col md:flex-row lg:items-center gap-10 lg:gap-20;
+    @apply relative w-[1200px] flex flex-col md:flex-row lg:items-center gap-10 lg:gap-20 px-5;
 }
 
 .hero-buttons {
@@ -26,10 +26,4 @@
 
 .hero-image {
     @apply relative md:absolute w-full sm:w-[300px] md:w-[450px] lg:w-[500px] bottom-0 right-0;
-}
-
-@media (max-width: 860px) {
-    .hero-image {
-        @apply w-[400px];
-    }
 }

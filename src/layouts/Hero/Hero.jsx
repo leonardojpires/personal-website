@@ -7,7 +7,7 @@ import { FaBookBookmark } from "react-icons/fa6";
 export default function Hero() {
   return (
     <section className="pt-30 lg:pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen">
-      <div className="hero-section px-5">
+      <div className="hero-section">
 
         <div className="w-full md:w-1/2">
           <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body">
