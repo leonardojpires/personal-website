@@ -7,7 +7,7 @@ const projectsData = [
         type: "Fitness & Wellness",
         title: "Fit Fetch",
         description: "Fitness app that helps user create and track personalized workout and nutrition plan based on their goals, preferences and lifestyle.",
-        technologies: ["React.js", "TailwdindCSS", "Node.js", "Express", "Sequelize", "MySQL", "Firebase"],
+        technologies: ["React.js", "TailwdindCSS", "Node.js", "Express.js", "Sequelize", "MySQL", "Firebase"],
         image: FitFetchImage,
         featured: true,
     },

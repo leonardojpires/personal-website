@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.cta-section {
+    @apply mt-20 mb-20 max-w-[1200px] mx-auto;
+}
+
+.cta-container {
+    @apply flex flex-col items-center text-center px-2 md:px-10 py-16 lg:rounded-3xl;
+    background: #242242;
+    background: radial-gradient(circle,rgba(36, 34, 66, 1) 24%, rgba(12, 12, 33, 1) 100%);
+}
+
+.cta-title {
+    @apply text-(--gray-50) font-bold text-4xl md:text-5xl mb-6;
+}
+
+.cta-description {
+    @apply text-(--gray-200) text-lg mb-8
+}
+
+.cta-button {
+    @apply bg-(--color-primary) text-(--gray-50) px-6 py-3 rounded-lg font-semibold transition-transform transition-shadow duration-300 cursor-pointer;
+    box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.cta-button:hover {
+    @apply translate-y-[-2px];
+    box-shadow: 0 0 30px rgba(var(--color-primary-rgb), 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
