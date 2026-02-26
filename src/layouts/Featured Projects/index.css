@@ -11,3 +11,11 @@
 .featured-projects-container {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl px-4;
 }
+
+.featured-projects-link {
+    @apply bg-(--color-primary) text-white px-12 py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out;
+}
+
+.featured-projects-link:hover {
+    @apply bg-(--color-primary)/90 translate-y-[-3px] shadow-xl;
+}

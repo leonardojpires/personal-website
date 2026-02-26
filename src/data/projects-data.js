@@ -20,6 +20,14 @@ const projectsData = [
         image: VibrazeImage,
         featured: true,
     },
+    {
+        id: 3,
+        type: "Music & Entertainment",
+        title: "Vibraze",
+        description: "Music app that provides information about artists and their discography from the rock and metal industries, allowing users to explore and learn more about their favorite bands/artists.",
+        technologies: ["Laravel", "Blade", "Eloquent", "MySQL"],
+        image: VibrazeImage,
+    },
 ]
 
 export default projectsData;
