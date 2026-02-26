@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
+
 .featured-project-card {
-    @apply bg-(--gray-50)/90 backdrop-blur-2xl rounded-lg shadow-md overflow-hidden;
+    @apply bg-(--gray-50)/90 backdrop-blur-2xl rounded-lg shadow-md overflow-hidden flex flex-col h-full min-h-[480px];
 }
 
 .featured-project-card:hover {
@@ -28,13 +29,12 @@
     @apply opacity-100;
 }
 
-
 .featured-project-overlay > a {
     @apply text-[16px] bg-(--gray-50) px-4 py-2 rounded-md text-(--gray-900) font-semibold hover:bg-(--gray-200) transition-colors;
 }
 
 .featured-project-content {
-    @apply flex flex-col p-6;
+    @apply flex flex-col flex-1 p-6 justify-between;
 }
 
 .featured-project-type-container {
@@ -58,4 +58,12 @@
 
 .featured-project-technology {
     @apply text-xs text-(--gray-700) bg-(--gray-200)/80 px-2 py-1 rounded-md
+}
+
+.project-links {
+    @apply flex flex-row gap-4 mt-5;
+}
+
+.project-links-link {
+    @apply text-lg text-(--gray-50) bg-(--color-primary) px-3 py-1 rounded-md font-semibold hover:bg-(--color-primary)/90 transition-colors;
 }

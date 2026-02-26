@@ -1,7 +1,7 @@
 import "./index.css";
 import projectsData from "../../data/projects-data";
-import FeaturedProjectCard from './../../components/FeaturedProjectCard/FeaturedProjectCard';
 import { Link } from 'react-router-dom';
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 export default function FeaturedProject() {
     return (
@@ -9,10 +9,10 @@ export default function FeaturedProject() {
             <h2 className="featured-projects-title font-headline">Featured Projects</h2>
 
             <div className="featured-projects-container">
-                {projectsData.map((project, index) => {
+                {projectsData.map((project) => {
                     if (project.featured) {
                         return (
-                            <FeaturedProjectCard key={index} {...project} />
+                            <ProjectCard key={project.id} {...project} />
                         )
                     }
                 })}
