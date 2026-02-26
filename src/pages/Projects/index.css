@@ -21,5 +21,5 @@
 }
 
 .projects-grid {
-    @apply w-full grid  lg:grid-cols-2 gap-10;
+    @apply w-full grid grid-cols-1 md:grid-cols-2 gap-10;
 }

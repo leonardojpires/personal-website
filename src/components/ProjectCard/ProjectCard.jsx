@@ -8,31 +8,30 @@ export default function ProjectCard({
   description,
   technologies,
   image,
-  featured,
   github,
   url,
 }) {
   const isProjectsPage = window.location.pathname === "/projects";
 
   return (
-    <div className="featured-project-card">
-      <div className="featured-project-image">
+    <div className="project-card">
+      <div className="project-image">
         <img src={image} alt={title} />
-        <div className="featured-project-overlay">
+        <div className="project-overlay">
           <a href="#">View Project</a>
         </div>
       </div>
 
-      <div className="featured-project-content flex flex-col flex-1 justify-between">
+      <div className="project-content flex flex-col flex-1 justify-between">
         <div>
-          <div className="featured-project-type-container">
-            <span className="featured-project-type font-body">{type}</span>
+          <div className="project-type-container">
+            <span className="project-type font-body">{type}</span>
           </div>
-          <h3 className="featured-project-title font-headline">{title}</h3>
-          <p className="featured-project-description font-body">{description}</p>
-          <div className="featured-project-technologies font-body">
+          <h3 className="project-title font-headline">{title}</h3>
+          <p className="project-description font-body">{description}</p>
+          <div className="project-technologies font-body">
             {technologies.map((tech) => (
-              <span key={id + tech} className="featured-project-technology">
+              <span key={id + tech} className="project-technology">
                 {tech}
               </span>
             ))}

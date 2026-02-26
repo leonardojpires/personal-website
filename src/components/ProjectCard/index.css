@@ -1,62 +1,62 @@
 @import "tailwindcss";
 
 
-.featured-project-card {
+.project-card {
     @apply bg-(--gray-50)/90 backdrop-blur-2xl rounded-lg shadow-md overflow-hidden flex flex-col h-full min-h-[480px];
 }
 
-.featured-project-card:hover {
+.project-card:hover {
     @apply shadow-lg cursor-pointer;
 }
 
-.featured-project-image {
+.project-image {
     @apply relative w-full h-64 overflow-hidden flex items-center justify-center;
 }
 
-.featured-project-image img {
+.project-image img {
     @apply w-full h-full object-cover object-center transition-transform duration-300 ease-out;
 }
 
-.featured-project-card:hover .featured-project-image img {
+.project-card:hover .project-image img {
     @apply scale-110;
 }
 
-.featured-project-overlay {
+.project-overlay {
     @apply absolute inset-0 bg-(--gray-900)/80 backdrop-blur-sm opacity-0 transition-opacity flex items-center justify-center p-4 cursor-pointer;
 }
 
-.featured-project-card:hover .featured-project-overlay {
+.project-card:hover .project-overlay {
     @apply opacity-100;
 }
 
-.featured-project-overlay > a {
+.project-overlay > a {
     @apply text-[16px] bg-(--gray-50) px-4 py-2 rounded-md text-(--gray-900) font-semibold hover:bg-(--gray-200) transition-colors;
 }
 
-.featured-project-content {
+.project-content {
     @apply flex flex-col flex-1 p-6 justify-between;
 }
 
-.featured-project-type-container {
+.project-type-container {
     @apply bg-(--color-primary)/10 border border-(--color-primary)/20 inline-block px-3 py-0.5 rounded-md mb-4;
 }
 
-.featured-project-type {
+.project-type {
     @apply font-bold text-[11px] text-(--color-primary) uppercase tracking-wide mb-2;
 }
 
-.featured-project-title {
+.project-title {
     @apply text-xl text-(--gray-900) font-bold mb-4;
 }
 
-.featured-project-description {
+.project-description {
     @apply text-sm text-(--gray-500) mb-6
 }
-.featured-project-technologies {
+.project-technologies {
     @apply flex flex-wrap gap-2
 }
 
-.featured-project-technology {
+.project-technology {
     @apply text-xs text-(--gray-700) bg-(--gray-200)/80 px-2 py-1 rounded-md
 }
 
