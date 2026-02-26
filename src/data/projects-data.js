@@ -34,7 +34,7 @@ const projectsData = [
         technologies: ["PHP", "PDO", "MySQL", "MVC Architecture"],
         image: BravattaImage,
         github: "https://github.com/leonardojpires/bravatta-roleplay",
-        url: "",
+        url: "https://bravatta-roleplay.infinityfreeapp.com",
         featured: false
     },
     {
