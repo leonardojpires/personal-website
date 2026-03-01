@@ -23,7 +23,7 @@ const projectsData = [
         technologies: ["Laravel", "Blade", "Eloquent", "MySQL", "MVC Architecture"],
         image: VibrazeImage,
         github: "https://github.com/leonardojpires/vibraze",
-        url: "vibraze.free.nf",
+        url: "https://vibraze.free.nf/",
         featured: true,
     },
     {

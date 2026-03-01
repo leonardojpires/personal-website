@@ -26,7 +26,7 @@ export default function Header() {
 
         {/* ---- Desktop Menu ----*/}
         <div className="hidden md:flex flex-row items-center gap-10 font-body">
-          <a href="#work" className="nav-links">
+          <a href="#featured-projects" className="nav-links">
             Work
           </a>
           <a href="#about" className="nav-links">
