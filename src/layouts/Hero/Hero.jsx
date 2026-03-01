@@ -1,5 +1,5 @@
 import "./index.css";
-import personalImage from "../../../public/imgs/hero/personal_picture.png";
+import personalImage from "../../../public/imgs/hero/personal_picture.webp";
 import HeroCards from "../../components/HeroCard/HeroCards";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaBookBookmark } from "react-icons/fa6";
