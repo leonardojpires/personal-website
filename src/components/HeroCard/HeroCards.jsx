@@ -23,7 +23,7 @@ export default function HeroCards({ icon, title, description }) {
     return (
         <div ref={cardRef} className={`hero-card ${
             title === "EXPERIENCE" 
-            ? "top-3 md:top-5 right-12 md:right-16 lg:right-1 xl:-right-5 rotate-[5deg] float-animation"
+            ? "top-3 md:top-5 right-12 md:right-16 lg:right-5 xl:-right-5 rotate-[5deg] float-animation"
             : "bottom-3 md:bottom-8 left-12 sm:left-14 md:left-8 lg:-left-20 rotate-[-5deg] float-reverse-animation"}`}>
             { icon }
             <span className="hero-card-title font-headline">{ title }</span>
