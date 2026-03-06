@@ -8,19 +8,19 @@
     @apply flex flex-row justify-center sm:justify-start gap-5 mt-10;
 }
 
-.hero-buttons > button:first-child {
+.hero-buttons > a:first-child {
     @apply bg-(--color-primary) text-(--gray-50) px-6 py-4 rounded-lg cursor-pointer transition-transform duration-300 ease-in-out;
 }
 
-.hero-buttons > button:last-child {
+.hero-buttons > a:last-child {
     @apply bg-transparent border-2 border-(--gray-900) text-(--gray-900) px-6 py-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out;
 }
 
-.hero-buttons > button:first-child:hover {
+.hero-buttons > a:first-child:hover {
     @apply translate-y-[-3px] shadow-md;
 }
 
-.hero-buttons > button:last-child:hover {
+.hero-buttons > a:last-child:hover {
     @apply translate-y-[-3px] shadow-md bg-(--gray-900) text-(--gray-50);
 }
 

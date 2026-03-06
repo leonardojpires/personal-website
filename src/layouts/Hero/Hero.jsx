@@ -32,8 +32,10 @@ export default function Hero() {
             infrastructure.
           </p>
           <div className="hero-buttons font-bold">
-            <button>View Projects</button>
-            <button>Download CV</button>
+            <a href="#featured-projects">View Projects</a>
+            <a href="/src/assets/CV/CV.pdf" target="_blank" rel="noopener noreferrer">
+              Download CV
+            </a>
           </div>
         </Motion.div>
 
