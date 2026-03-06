@@ -13,10 +13,7 @@ export default function About() {
           Turning Ideas Into Code
         </span>
         <p className="about-description font-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-          dolores accusantium error aliquid, unde, deserunt voluptatibus animi
-          eaque earum eveniet explicabo laborum adipisci labore totam, ab
-          ratione eius sequi corrupti.
+          With over 2 years experience in full-stack development, I am specialized in building scalable and scalable web applications that deliver exceptional user experiences and measurable business value. My approach combines technical expertise with a deep understanding of user needs 
         </p>
         <div className="about-skills">
           {skillsData.map((skill) => (
