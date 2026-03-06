@@ -3,13 +3,19 @@ import personalImage from "../../../public/imgs/hero/personal_picture.webp";
 import HeroCards from "../../components/HeroCard/HeroCards";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaBookBookmark } from "react-icons/fa6";
+import { motion as Motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <section className="pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen">
       <div className="hero-section">
 
-        <div className="w-full md:w-1/2">
+        <Motion.div
+          className="w-full md:w-1/2"
+          initial={{ opacity: 0, x: -24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
+        >
           <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body">
             Fullstack Web Developer & Code Enthusiast
           </span>
@@ -29,9 +35,14 @@ export default function Hero() {
             <button>View Projects</button>
             <button>Download CV</button>
           </div>
-        </div>
+        </Motion.div>
 
-        <div className="hero-image mx-auto lg:mx-0">
+        <Motion.div
+          className="hero-image mx-auto lg:mx-0"
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.65, delay: 0.15, ease: "easeOut" }}
+        >
           <img
             src={personalImage}
             alt="Leonardo Pires"
@@ -47,7 +58,7 @@ export default function Hero() {
             title="PROJECTS"
             description="10+ projects"
           />
-        </div>
+        </Motion.div>
       </div>
     </section>
   );
