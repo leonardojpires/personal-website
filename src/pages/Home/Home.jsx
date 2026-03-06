@@ -1,9 +1,10 @@
 import "./index.css";
-import FeaturedProject from "../../layouts/FeaturedProjects/FeaturedProjects";
 import Hero from "../../layouts/Hero/Hero";
 import About from './../../layouts/About/About';
 import CTA from './../../layouts/CTA/CTA';
 import { motion as Motion } from "framer-motion";
+import FeaturedProjects from './../../layouts/FeaturedProjects/FeaturedProjects';
+
 
 const sectionFade = {
     initial: { opacity: 0, y: 24 },
@@ -18,7 +19,7 @@ export default function Home() {
             <Hero />
 
             <Motion.div {...sectionFade}>
-                <FeaturedProject />
+                <FeaturedProjects />
             </Motion.div>
 
             <Motion.div

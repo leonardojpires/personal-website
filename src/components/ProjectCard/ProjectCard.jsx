@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import "./index.css";
+import { Link } from "react-router-dom";
+import { FaCodeBranch } from "react-icons/fa6";
+import { GrDeploy } from "react-icons/gr";
 
 export default function ProjectCard({
   id,
@@ -45,7 +47,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="project-links-link"
             >
-              Code
+              <FaCodeBranch />Code
             </Link>
             <Link
               to={url}
@@ -53,7 +55,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="project-links-link"
             >
-              Live Demo
+              <GrDeploy /> Live Demo
             </Link>
           </div>
         )}

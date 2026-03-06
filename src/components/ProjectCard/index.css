@@ -65,5 +65,5 @@
 }
 
 .project-links-link {
-    @apply text-lg text-(--gray-50) bg-(--color-primary) px-3 py-1 rounded-md font-semibold hover:bg-(--color-primary)/90 transition-colors;
+    @apply text-[16px] text-(--gray-50) bg-(--color-primary) px-3 py-1 rounded-md font-semibold hover:bg-(--color-primary)/90 transition-colors flex items-center gap-1;
 }
