@@ -2,7 +2,7 @@ import './index.css';
 
 export default function Container({ children }) {
     return (
-        <main>
+        <main id="main-content" tabIndex="-1">
             { children }
         </main>
     );

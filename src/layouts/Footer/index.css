@@ -63,6 +63,10 @@
   text-decoration: none;
 }
 
+.footer-link-disabled {
+  @apply text-(--gray-500) cursor-not-allowed;
+}
+
 .footer-link::before {
   @apply absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-1 rounded-full -translate-x-1 transition-all duration-300;
   background: var(--color-primary);
