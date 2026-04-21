@@ -1,4 +1,5 @@
 import "./index.css";
+import personalImage from "../../../public/imgs/hero/personal_picture.webp";
 import { Link } from "react-router-dom";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useRef, useState } from "react";
@@ -121,30 +122,34 @@ export default function Header() {
     <header className="header">
       <nav className="header-nav" aria-label="Primary">
         <div className="desktop-brand text-2xl font-bold font-headline md:text-3xl">
-          <Link to="/" className="text-transparent bg-clip-text bg-(--color-primary)">
-            Leonardo Pires
+          <Link to="/">
+            <img src={personalImage} alt="" className="border-4 border-(--color-primary) rounded-full pointer-events-none" />
           </Link>
         </div>
 
         {/* ---- Desktop Sidebar Menu ----*/}
         <ul className="desktop-menu font-body">
           <li>
-            <a href="/#featured-projects" className="nav-links">
+            <a href="/#featured-projects" className="nav-links desktop-nav-link">
+              <MdOutlineWorkOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
               Work
             </a>
           </li>
           <li>
-            <a href="/#about" className="nav-links">
+            <a href="/#about" className="nav-links desktop-nav-link">
+              <IoPersonOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
               About
             </a>
           </li>
           <li>
-            <a href="/#skills" className="nav-links">
+            <a href="/#skills" className="nav-links desktop-nav-link">
+              <IoBookOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
               Skills
             </a>
           </li>
           <li>
-            <a href="/#contact" className="nav-links-contact">
+            <a href="/#contact" className="nav-links-contact desktop-nav-link-contact">
+              <MdOutlineHeadphones aria-hidden="true" focusable="false" />
               Get in touch
             </a>
           </li>
@@ -206,7 +211,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <MdOutlineWorkOutline
-                    size={20}
+                    size={24}
                     className="text-(--gray-900)"
                     aria-hidden="true"
                     focusable="false"
@@ -221,7 +226,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <IoPersonOutline
-                    size={20}
+                    size={24}
                     className="text-(--gray-900)"
                     aria-hidden="true"
                     focusable="false"
@@ -236,7 +241,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <IoBookOutline
-                    size={20}
+                    size={24}
                     className="text-(--gray-900)"
                     aria-hidden="true"
                     focusable="false"
@@ -250,7 +255,7 @@ export default function Header() {
                   className="relative w-full flex justify-center items-center gap-2 font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-lg"
                   onClick={closeMenu}
                 >
-                  <MdOutlineHeadphones aria-hidden="true" focusable="false" />
+                  <MdOutlineHeadphones size={22} aria-hidden="true" focusable="false" />
                   Get in touch
                 </a>
               </li>
