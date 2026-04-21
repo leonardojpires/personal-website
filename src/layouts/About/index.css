@@ -28,6 +28,6 @@
     @apply flex flex-wrap flex-row justify-center items-stretch gap-7 mt-10;
 }
 
-.about-key-points > * {
-    @apply min-w-72;
+.about-key-point-item {
+    @apply w-72 flex;
 }

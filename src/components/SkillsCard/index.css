@@ -20,6 +20,6 @@
     @apply flex flex-col items-center justify-center w-full gap-2;
 }
 
-.about-skill-list span {
+.about-skill-list li {
     @apply text-sm text-(--gray-700);
 }

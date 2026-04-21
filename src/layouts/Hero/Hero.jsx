@@ -1,5 +1,6 @@
 import "./index.css";
 import personalImage from "../../../public/imgs/hero/personal_picture.webp";
+import cvFile from "../../assets/CV/CV.pdf";
 import HeroCards from "../../components/HeroCard/HeroCards";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaBookBookmark } from "react-icons/fa6";
@@ -7,7 +8,10 @@ import { motion as Motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen">
+    <section
+      className="pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
+      aria-labelledby="home-hero-title"
+    >
       <div className="hero-section">
 
         <Motion.div
@@ -19,7 +23,7 @@ export default function Hero() {
           <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body">
             Fullstack Web Developer & Code Enthusiast
           </span>
-          <h1 className="font-bold text-5xl md:text-6xl text-(--gray-900) mt-5 font-headline">
+          <h1 className="font-bold text-5xl md:text-6xl text-(--gray-900) mt-5 font-headline" id="home-hero-title">
             Shaping Dreams Into{" "}
             <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
               Digital Excellence
@@ -33,7 +37,7 @@ export default function Hero() {
           </p>
           <div className="hero-buttons font-bold">
             <a href="#featured-projects">View Projects</a>
-            <a href="/src/assets/CV/CV.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={cvFile} target="_blank" rel="noopener noreferrer" aria-label="Download Leonardo Pires CV as PDF">
               Download CV
             </a>
           </div>
@@ -47,16 +51,16 @@ export default function Hero() {
         >
           <img
             src={personalImage}
-            alt="Leonardo Pires"
+            alt="Portrait of Leonardo Pires"
             className="pointer-events-none"
           />
           <HeroCards
-            icon={<AiFillThunderbolt size={20} className="text-(--color-secondary)" />}
+            icon={<AiFillThunderbolt size={20} className="text-(--color-secondary)" aria-hidden="true" focusable="false" />}
             title="EXPERIENCE"
             description="2+ years"
           />
           <HeroCards
-            icon={<FaBookBookmark size={20} className="text-(--color-secondary)" />}
+            icon={<FaBookBookmark size={20} className="text-(--color-secondary)" aria-hidden="true" focusable="false" />}
             title="PROJECTS"
             description="10+ projects"
           />

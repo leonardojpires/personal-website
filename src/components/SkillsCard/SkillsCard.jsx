@@ -1,17 +1,20 @@
+import { createElement } from "react";
 import "./index.css";
 
 export default function SkillsCard({ icon: Icon, title, skills }) {
   return (
-    <div className="about-skill">
+    <article className="about-skill" aria-label={title}>
       <div className="flex flex-col items-center gap-4 mb-4 text-center">
-          <span><Icon /></span>
+          <span aria-hidden="true">
+            {Icon ? createElement(Icon) : null}
+          </span>
           <h3 className="font-headline">{title}</h3>
       </div>
-      <div className="about-skill-list font-body">
+      <ul className="about-skill-list font-body" aria-label={`${title} technologies`}>
         {skills.map((skill, index) => (
-          <span key={index}>{skill}</span>
+          <li key={index}>{skill}</li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </article>
   );
 }

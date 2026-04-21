@@ -6,6 +6,9 @@ import Footer from "../../layouts/Footer/Footer";
 export default function BasePage() {
     return (
         <>
+            <a className="skip-link" href="#main-content">
+                Skip to main content
+            </a>
             <Header />
             <Container>
                 <Outlet />

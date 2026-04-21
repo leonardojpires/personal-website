@@ -1,5 +1,5 @@
 import "./index.css";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { FaCodeBranch } from "react-icons/fa6";
 import { GrDeploy } from "react-icons/gr";
 
@@ -13,14 +13,29 @@ export default function ProjectCard({
   github,
   url,
 }) {
-  const isProjectsPage = window.location.pathname === "/projects";
+  const location = useLocation();
+  const isProjectsPage = location.pathname === "/projects";
+  const primaryProjectLink = url || github;
 
   return (
-    <div className="project-card">
+    <article className="project-card" aria-labelledby={`project-${id}-title`}>
       <div className="project-image">
-        <img src={image} alt={title} />
+        <img src={image} alt={`${title} project preview`} />
         <div className="project-overlay">
-          <a href="#">View Project</a>
+          {primaryProjectLink ? (
+            <a
+              href={primaryProjectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${title}`}
+            >
+              View Project
+            </a>
+          ) : (
+            <span className="project-overlay-disabled" aria-disabled="true">
+              Project coming soon
+            </span>
+          )}
         </div>
       </div>
 
@@ -29,37 +44,45 @@ export default function ProjectCard({
           <div className="project-type-container">
             <span className="project-type font-body">{type}</span>
           </div>
-          <h3 className="project-title font-headline">{title}</h3>
+          <h3 className="project-title font-headline" id={`project-${id}-title`}>
+            {title}
+          </h3>
           <p className="project-description font-body">{description}</p>
-          <div className="project-technologies font-body">
+          <ul className="project-technologies font-body" aria-label={`${title} technologies`}>
             {technologies.map((tech) => (
-              <span key={id + tech} className="project-technology">
+              <li key={id + tech} className="project-technology">
                 {tech}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
         {isProjectsPage && (
           <div className="project-links font-body">
-            <Link
-              to={github}
+            <a
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
               className="project-links-link"
+              aria-label={`Open ${title} source code repository`}
             >
-              <FaCodeBranch />Code
-            </Link>
-            <Link
-              to={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-links-link"
-            >
-              <GrDeploy /> Live Demo
-            </Link>
+              <FaCodeBranch aria-hidden="true" focusable="false" />
+              Code
+            </a>
+            {url ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-links-link"
+                aria-label={`Open ${title} live demo`}
+              >
+                <GrDeploy aria-hidden="true" focusable="false" />
+                Live Demo
+              </a>
+            ) : null}
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 }

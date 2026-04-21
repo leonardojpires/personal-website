@@ -5,6 +5,9 @@ import socialLinks from "../../data/social-links-data";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const isExternalLink = (url) => /^(https?:|mailto:)/.test(url);
+  const isDocumentLink = (url) => /\.pdf(\?|$)/i.test(url);
+  const isPlaceholderLink = (url) => url === "#";
 
   return (
     <footer className="footer">
@@ -27,9 +30,24 @@ export default function Footer() {
                 <ul className="footer-links-list">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <a href={link.url} target="_blank" className="footer-link font-body">
-                        {link.label}
-                      </a>
+                      {isPlaceholderLink(link.url) ? (
+                        <span className="footer-link footer-link-disabled font-body" aria-disabled="true">
+                          {link.label}
+                        </span>
+                      ) : isExternalLink(link.url) || isDocumentLink(link.url) ? (
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="footer-link font-body"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link to={link.url} className="footer-link font-body">
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -51,17 +69,17 @@ export default function Footer() {
             {socialLinks.map((social) => {
               const Icon = social.icon;
               return (
-                <Link
+                <a
                   key={social.label}
-                  to={social.url}
+                  href={social.url}
                   className="social-link"
-                  aria-label={social.label}
+                  aria-label={`Visit ${social.label}`}
                   title={social.label}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon size={20} />
-                </Link>
+                  <Icon size={20} aria-hidden="true" focusable="false" />
+                </a>
               );
             })}
           </div>

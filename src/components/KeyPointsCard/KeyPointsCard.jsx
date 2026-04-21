@@ -1,10 +1,11 @@
+import { createElement } from "react";
 import "./index.css";
 
 export default function KeyPointsCard({ icon: Icon, title, description }) {
   return (
-    <div className="key-points-card">
-      <span className="key-points-icon">
-        <Icon />
+    <article className="key-points-card" aria-label={title}>
+      <span className="key-points-icon" aria-hidden="true">
+        {Icon ? createElement(Icon) : null}
       </span>
       <h3 className="key-points-title font-headline">
         {title}
@@ -12,6 +13,6 @@ export default function KeyPointsCard({ icon: Icon, title, description }) {
       <p className="key-points-description font-body">
         {description}
       </p>
-    </div>
+    </article>
   );
 }

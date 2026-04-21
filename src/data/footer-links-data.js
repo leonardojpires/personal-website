@@ -1,12 +1,14 @@
+import cvFile from "../assets/CV/CV.pdf";
+
 const footerLinks = {
     Navigation: [
         { label: "Home", url: "/" },
         { label: "Work", url: "/#featured-projects" },
         { label: "About", url: "/#about" },
-        { label: "Get in Touch", url: "/#cta" },
+        { label: "Get in Touch", url: "/#contact" },
     ],
     Resources: [
-        { label: "CV", url: "/src/assets/CV/CV.pdf" },
+        { label: "CV", url: cvFile },
         { label: "Blog", url: "#" },
         { label: "Case Studies", url: "#" },
         { label: "Documentation", url: "#" },
