@@ -1,15 +1,27 @@
 @import "tailwindcss";
 
 .header {
-    @apply fixed top-0 left-0 right-0 flex justify-evenly items-center py-5 px-4 lg:justify-evenly backdrop-blur-xl bg-(--gray-50)/90 border-b border-white/20 dark:border-white/10 z-50 shadow-md
+    @apply fixed top-4 right-4 z-50 md:top-0 md:right-auto md:left-0 md:w-64 md:h-screen md:backdrop-blur-xl md:bg-(--gray-50)/95 md:border-r md:border-white/20 md:shadow-md;
+}
+
+.header-nav {
+    @apply flex items-center md:flex-col md:items-start md:justify-start md:w-full md:h-full md:px-7 md:py-8;
+}
+
+.desktop-brand {
+    @apply hidden md:block;
+}
+
+.desktop-menu {
+    @apply hidden md:flex md:flex-col md:items-start md:gap-6 md:mt-12 md:w-full list-none p-0;
 }
 
 .menu-button {
-    @apply flex items-center md:hidden font-bold text-2xl text-(--gray-900) cursor-pointer transition-colors duration-200 bg-transparent border-0;
+    @apply flex items-center justify-center md:hidden font-bold text-2xl text-(--gray-900) cursor-pointer transition-colors duration-200 bg-(--gray-50)/95 border border-white/60 backdrop-blur-xl shadow-lg rounded-lg w-11 h-11;
 }
 
 .nav-links {
-    @apply relative w-auto font-semibold text-transparent bg-clip-text bg-(--gray-900) transition-colors duration-200;
+    @apply relative inline-flex w-auto font-semibold text-transparent bg-clip-text bg-(--gray-900) transition-colors duration-200;
 }
 
 .nav-links:hover {
@@ -25,7 +37,7 @@
 }
 
 .nav-links-contact {
-    @apply font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out;
+    @apply inline-flex font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out;
 }
 
 .nav-links-contact:hover {
@@ -33,13 +45,47 @@
 }
 
 .mobile-menu {
-    @apply absolute w-full sm:w-[320px] flex top-[73px] right-0 bg-(--gray-50)/95 backdrop-blur-lg transition-opacity duration-300 ease-in-out p-4 shadow-xl md:hidden
+    @apply fixed top-0 left-0 h-screen w-72 max-w-[85vw] bg-(--gray-50)/95 backdrop-blur-lg p-6 shadow-2xl border-r border-white/40 md:hidden z-[60] flex flex-col;
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease-out;
+    will-change: transform, opacity;
 }
 
-.mobile-menu > div {
-    @apply w-full flex flex-col items-start gap-7 mt-4;
+.mobile-menu-open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-menu-close {
+    opacity: 0;
+    transform: translateX(-18px);
+    pointer-events: none;
+}
+
+.mobile-menu-backdrop {
+    @apply fixed inset-0 bg-(--gray-900)/35 border-0 md:hidden z-[55];
+    opacity: 0;
+    transition: opacity 220ms ease-out;
+}
+
+.mobile-menu-backdrop-open {
+    opacity: 1;
+}
+
+.mobile-menu-backdrop-close {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu-header {
+    @apply flex items-center justify-between w-full;
+}
+
+.menu-close-button {
+    @apply flex items-center justify-center text-2xl text-(--gray-900) bg-transparent border-0 cursor-pointer;
 }
 
 .mobile-menu ul {
-    @apply w-full flex flex-col items-start gap-7 mt-4 list-none p-0 m-0;
+    @apply w-full flex flex-col items-start gap-7 mt-10 list-none p-0 m-0;
 }

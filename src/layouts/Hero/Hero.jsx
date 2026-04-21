@@ -9,7 +9,7 @@ import { motion as Motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
-      className="pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
+      className="pt-30 md:pt-12 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
       aria-labelledby="home-hero-title"
     >
       <div className="hero-section">

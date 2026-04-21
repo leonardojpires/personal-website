@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .projects-header-section {
-    @apply pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20;
+    @apply pt-30 md:pt-12 bg-linear-to-t from-gray-100 to-(--color-secondary)/20;
 }
 
 .projects-header {
