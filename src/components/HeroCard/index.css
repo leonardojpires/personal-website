@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .hero-card {
-    @apply w-[110px] md:w-[120px] lg:w-[150px] absolute hidden md:flex flex-col items-start gap-1.5 bg-(--gray-50)/90 text-(--gray-900) p-3 md:p-3.5 lg:p-4 rounded-lg shadow-lg backdrop-blur-md transition-all duration-300 ease-in-out;
+    @apply w-[104px] md:w-[114px] lg:w-[142px] absolute hidden md:flex flex-col items-start gap-1 bg-(--gray-50)/90 text-(--gray-900) p-2.5 md:p-3 lg:p-3.5 rounded-lg shadow-lg backdrop-blur-md transition-all duration-300 ease-in-out;
 }
 
 .hero-card:hover {
@@ -9,11 +9,27 @@
 }
 
 .hero-card-title {
-    @apply font-semibold text-[9px] md:text-[10px] lg:text-xs text-(--color-primary);
+    @apply font-semibold text-[8px] md:text-[9px] lg:text-[11px] text-(--color-primary);
 }
 
 .hero-card-description {
-    @apply font-bold text-sm md:text-base lg:text-lg;
+    @apply font-bold text-xs md:text-sm lg:text-base;
+}
+
+.hero-card-grid {
+    @apply relative flex w-full min-h-[120px] gap-2 bg-(--gray-50)/95 border border-white/70 rounded-xl p-4 shadow-sm;
+}
+
+.hero-card-grid > span:first-child {
+    @apply mt-0.5;
+}
+
+.hero-card-grid .hero-card-title {
+    @apply mt-1 text-lg md:text-xl text-(--gray-900);
+}
+
+.hero-card-grid .hero-card-description {
+    @apply mt-1 text-xs md:text-sm text-(--gray-700) leading-relaxed font-medium;
 }
 
 /* CUSTOM ANIMATIONS */

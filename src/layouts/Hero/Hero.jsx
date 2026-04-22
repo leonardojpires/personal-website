@@ -1,5 +1,4 @@
 import "./index.css";
-import personalImage from "../../../public/imgs/hero/personal_picture.webp";
 import cvFile from "../../assets/CV/CV.pdf";
 import HeroCards from "../../components/HeroCard/HeroCards";
 import { AiFillThunderbolt } from "react-icons/ai";
@@ -57,43 +56,6 @@ export default function Hero() {
             </div>
           </div>
         </Motion.div>
-
-        {/* <Motion.div
-          className="hero-image mx-auto lg:mx-0"
-          initial={{ opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.65, delay: 0.15, ease: "easeOut" }}
-        >
-          <img
-            src={personalImage}
-            alt="Portrait of Leonardo Pires"
-            className="pointer-events-none"
-          />
-          <HeroCards
-            icon={
-              <AiFillThunderbolt
-                size={20}
-                className="text-(--color-secondary)"
-                aria-hidden="true"
-                focusable="false"
-              />
-            }
-            title="EXPERIENCE"
-            description="2+ years"
-          />
-          <HeroCards
-            icon={
-              <FaBookBookmark
-                size={20}
-                className="text-(--color-secondary)"
-                aria-hidden="true"
-                focusable="false"
-              />
-            }
-            title="PROJECTS"
-            description="10+ projects"
-          />
-        </Motion.div> */}
       </div>
     </section>
   );
