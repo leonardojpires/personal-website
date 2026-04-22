@@ -122,8 +122,20 @@ export default function Header() {
     <header className="header">
       <nav className="header-nav" aria-label="Primary">
         <div className="desktop-brand text-2xl font-bold font-headline md:text-3xl">
-          <Link to="/">
-            <img src={personalImage} alt="" className="border-4 border-(--color-primary) rounded-full pointer-events-none" />
+          <Link to="/" className="desktop-avatar-link" aria-label="Go to homepage">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-1.5 rounded-full bg-[conic-gradient(from_35deg,var(--color-primary),var(--color-secondary),var(--color-primary))] animate-[spin_9s_linear_infinite] motion-reduce:animate-none"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-3 rounded-full bg-(--color-primary)/28 blur-md"
+            />
+            <img
+              src={personalImage}
+              alt=""
+              className="relative border-4 border-white rounded-full pointer-events-none"
+            />
           </Link>
         </div>
 
@@ -187,10 +199,19 @@ export default function Header() {
             <div className="mobile-menu-header">
               <Link
                 to="/"
-                className="text-transparent bg-clip-text bg-(--color-primary) text-xl font-bold font-headline"
+                className="mobile-avatar-link"
                 onClick={closeMenu}
+                aria-label="Go to homepage"
               >
-                Leonardo Pires
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-1 rounded-full bg-[conic-gradient(from_35deg,var(--color-primary),var(--color-secondary),var(--color-primary))] animate-[spin_9s_linear_infinite] motion-reduce:animate-none"
+                />
+                <img
+                  src={personalImage}
+                  alt=""
+                  className="relative w-12 h-12 object-cover border-2 border-(--color-primary) rounded-full pointer-events-none"
+                />
               </Link>
 
               <button
@@ -211,7 +232,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <MdOutlineWorkOutline
-                    size={24}
+                    size={26}
                     className="text-(--gray-900)"
                     aria-hidden="true"
                     focusable="false"
@@ -226,7 +247,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <IoPersonOutline
-                    size={24}
+                    size={26}
                     className="text-(--gray-900)"
                     aria-hidden="true"
                     focusable="false"
@@ -241,7 +262,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <IoBookOutline
-                    size={24}
+                    size={26}
                     className="text-(--gray-900)"
                     aria-hidden="true"
                     focusable="false"
@@ -255,7 +276,7 @@ export default function Header() {
                   className="relative w-full flex justify-center items-center gap-2 font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-lg"
                   onClick={closeMenu}
                 >
-                  <MdOutlineHeadphones size={22} aria-hidden="true" focusable="false" />
+                  <MdOutlineHeadphones size={24} aria-hidden="true" focusable="false" />
                   Get in touch
                 </a>
               </li>

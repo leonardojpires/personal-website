@@ -22,22 +22,19 @@ export default function Hero() {
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
           <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body text-center">
-            Fullstack Web Developer & Code Enthusiast
+            Full-stack Web Developer & Code Enthusiast
           </span>
           <h1
             className="font-bold text-5xl md:text-7xl text-(--gray-900) mt-5 font-headline"
             id="home-hero-title"
           >
-            Shaping Dreams Into{" "}
+            Shaping Dreams Into Real{" "}
             <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
-              Digital Excellence
+              Web Experiences
             </span>
           </h1>
           <p className="md:text-lg text-(--gray-500) mt-5 font-body w-2/3">
-            I architect and develop high-performance web applications that
-            combine technical precision with thoughtful user experience.
-            specializing in fullstackdevelopment, design systems and scalable
-            infrastructure.
+            I architect and build robbust web applications from idea to production — working on both back-end systems and user-facing interfaces, with a focus on performance and scalability
           </p>
           <div className="hero-buttons font-bold">
             <div className="button-view-projects flex gap-4">
