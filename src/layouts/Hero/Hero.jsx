@@ -20,7 +20,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body text-center">
+          <span className="tracking-widest uppercase font-bold md:text-sm text-(--color-primary) font-body text-center bg-(--color-secondary)/15 px-3 py-1 rounded-full bg-clip-border">
             Full-stack Web Developer & Code Enthusiast
           </span>
           <h1

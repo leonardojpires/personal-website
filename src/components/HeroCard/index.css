@@ -31,37 +31,3 @@
 .hero-card-grid .hero-card-description {
     @apply mt-1 text-xs md:text-sm text-(--gray-700) leading-relaxed font-medium;
 }
-
-/* CUSTOM ANIMATIONS */
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.float-animation {
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float-reverse {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.float-reverse-animation {
-    animation: float-reverse 3s ease-in-out infinite;
-}

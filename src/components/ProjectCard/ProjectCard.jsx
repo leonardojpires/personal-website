@@ -1,4 +1,5 @@
 import "./index.css";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FaCodeBranch } from "react-icons/fa6";
 import { GrDeploy } from "react-icons/gr";
@@ -13,6 +14,7 @@ export default function ProjectCard({
   github,
   url,
 }) {
+  const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
   const isProjectsPage = location.pathname === "/projects";
   const primaryProjectLink = url || github;
@@ -20,7 +22,15 @@ export default function ProjectCard({
   return (
     <article className="project-card" aria-labelledby={`project-${id}-title`}>
       <div className="project-image">
-        <img src={image} alt={`${title} project preview`} />
+        {!isLoaded && <div className="project-image-skeleton" aria-hidden="true" />}
+        <img
+          src={image}
+          alt={`${title} project preview`}
+          loading="lazy"
+          className={`project-image-photo ${isLoaded ? "opacity-100" : "opacity-0"}`}
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setIsLoaded(true)}
+        />
         <div className="project-overlay">
           {primaryProjectLink ? (
             <a
