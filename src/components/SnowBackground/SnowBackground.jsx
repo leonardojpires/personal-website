@@ -9,7 +9,7 @@ export default function SnowBackground() {
         background="transparent"
         minSize={0.7}
         maxSize={2}
-        particleDensity={120}
+        particleDensity={100}
         speed={1.5}
         particleColor="#7c8cff"
       />

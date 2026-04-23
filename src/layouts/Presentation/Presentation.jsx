@@ -4,10 +4,9 @@ import { motion as Motion } from "framer-motion";
 import HeroCards from "./../../components/HeroCard/HeroCards";
 import {
   IoBriefcase,
-  IoFlash,
-  IoFolderOpenOutline,
 } from "react-icons/io5";
 import { IoIosBookmarks, IoIosGitNetwork } from "react-icons/io";
+import { MdComputer } from "react-icons/md";
 
 export default function Presentation() {
   return (
@@ -19,7 +18,7 @@ export default function Presentation() {
         transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
       >
         <h2 className="presentation-title font-headline">
-          Architectural Portfolio
+          Leonardo Pires
         </h2>
         <p className="presentation-description font-body">
           Coding is only one part of the process. I start by identifying the real problems, then design and architect scalable solutions before implementing them. Every step matters, from <strong>understanding</strong> the problem to delivering the final product.
@@ -30,8 +29,8 @@ export default function Presentation() {
             <HeroCards
               mode="grid"
               icon={
-                <IoIosGitNetwork
-                  size={18}
+                <MdComputer
+                  size={20}
                   className="text-(--color-primary)"
                   aria-hidden="true"
                   focusable="false"
@@ -46,9 +45,9 @@ export default function Presentation() {
             <HeroCards
               mode="grid"
               icon={
-                <IoIosBookmarks 
-                  size={18}
-                  className="text-(--gray-900)"
+                <IoIosBookmarks
+                  size={20}
+                  className="text-(--color-primary)"
                   aria-hidden="true"
                   focusable="false"
                 />
@@ -61,8 +60,8 @@ export default function Presentation() {
               mode="grid"
               icon={
                 <IoBriefcase
-                  size={18}
-                  className="text-(--color-secondary)"
+                  size={20}
+                  className="text-(--color-primary)"
                   aria-hidden="true"
                   focusable="false"
                 />
