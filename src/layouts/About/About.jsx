@@ -9,9 +9,9 @@ export default function About() {
     <section id="about" className="about-section" aria-labelledby="about-title">
       <div className="about-container">
         <h2 className="about-title font-headline" id="about-title">About Me</h2>
-        <span className="about-subtitle font-body">
+        {/* <span className="about-subtitle font-body">
           Turning Ideas Into Code
-        </span>
+        </span> */}
         <p className="about-description font-body">
           With over 2 years experience in full-stack development, I am specialized in building scalable and scalable web applications that deliver exceptional user experiences and measurable business value. My approach combines technical expertise with a deep understanding of user needs 
         </p>

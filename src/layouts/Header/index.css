@@ -1,15 +1,73 @@
 @import "tailwindcss";
 
 .header {
-    @apply fixed top-0 left-0 right-0 flex justify-evenly items-center py-5 px-4 lg:justify-evenly backdrop-blur-xl bg-(--gray-50)/90 border-b border-white/20 dark:border-white/10 z-50 shadow-md
+    @apply fixed top-4 right-4 z-50 md:top-0 md:right-auto md:left-0 md:w-72 md:h-screen md:backdrop-blur-xl md:bg-(--gray-50)/95 md:border-r md:border-white/20 md:shadow-md;
+}
+
+@media (min-width: 768px) {
+    .header {
+        background: linear-gradient(
+            165deg,
+            rgba(249, 250, 251, 0.86) 0%,
+            rgba(249, 250, 251, 0.76) 60%,
+            rgba(240, 249, 255, 0.72) 100%
+        );
+        box-shadow:
+            0 22px 44px rgba(15, 23, 42, 0.16),
+            inset 0 1px 0 rgba(255, 255, 255, 0.62),
+            inset -1px 0 0 rgba(255, 255, 255, 0.34);
+    }
+
+    .header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            rgba(79, 70, 229, 0.34) 0%,
+            rgba(79, 70, 229, 0.08) 100%
+        );
+        pointer-events: none;
+    }
+}
+
+.header-nav {
+    @apply flex items-center md:flex-col md:items-start md:justify-start md:w-full md:h-full md:px-8 md:py-9;
+}
+
+.desktop-brand {
+    @apply hidden md:block;
+}
+
+.desktop-avatar-link {
+    @apply relative inline-flex rounded-full transition-transform duration-300 ease-out hover:-translate-y-0.5;
+}
+
+.mobile-avatar-link {
+    @apply relative inline-flex rounded-full;
+}
+
+.desktop-menu {
+    @apply hidden md:flex md:flex-col md:items-center md:gap-4 md:mt-12 md:w-full list-none p-0;
 }
 
 .menu-button {
-    @apply flex items-center md:hidden font-bold text-2xl text-(--gray-900) cursor-pointer transition-colors duration-200 bg-transparent border-0;
+    @apply flex items-center justify-center md:hidden font-bold text-2xl text-(--gray-900) cursor-pointer transition-colors duration-200 bg-(--gray-50)/95 border border-white/60 backdrop-blur-xl shadow-lg rounded-lg w-11 h-11;
 }
 
 .nav-links {
-    @apply relative w-auto font-semibold text-transparent bg-clip-text bg-(--gray-900) transition-colors duration-200;
+    @apply relative inline-flex w-auto text-xl font-semibold text-transparent bg-clip-text bg-(--gray-900) transition-colors duration-200;
+}
+
+.desktop-nav-link {
+    @apply md:w-full md:flex md:items-center md:gap-3 md:px-3.5 md:py-3 md:rounded-xl md:bg-white/35 md:border md:border-white/45 md:text-(--gray-900) md:bg-none md:transition-colors md:duration-200;
+}
+
+.nav-link-icon {
+    @apply text-(--color-primary) text-2xl;
 }
 
 .nav-links:hover {
@@ -25,7 +83,11 @@
 }
 
 .nav-links-contact {
-    @apply font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out;
+    @apply inline-flex text-xl font-semibold text-(--gray-50) bg-(--color-primary) px-5 py-2.5 rounded-lg transition-transform duration-300 ease-in-out;
+}
+
+.desktop-nav-link-contact {
+    @apply md:w-full md:justify-center md:gap-2 md:mt-3 md:rounded-xl md:shadow-md;
 }
 
 .nav-links-contact:hover {
@@ -33,13 +95,47 @@
 }
 
 .mobile-menu {
-    @apply absolute w-full sm:w-[320px] flex top-[73px] right-0 bg-(--gray-50)/95 backdrop-blur-lg transition-opacity duration-300 ease-in-out p-4 shadow-xl md:hidden
+    @apply fixed top-0 left-0 h-screen w-72 max-w-[85vw] bg-(--gray-50)/95 backdrop-blur-lg p-6 shadow-2xl border-r border-white/40 md:hidden z-60 flex flex-col;
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease-out;
+    will-change: transform, opacity;
 }
 
-.mobile-menu > div {
-    @apply w-full flex flex-col items-start gap-7 mt-4;
+.mobile-menu-open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-menu-close {
+    opacity: 0;
+    transform: translateX(-18px);
+    pointer-events: none;
+}
+
+.mobile-menu-backdrop {
+    @apply fixed inset-0 bg-(--gray-900)/35 border-0 md:hidden z-55;
+    opacity: 0;
+    transition: opacity 220ms ease-out;
+}
+
+.mobile-menu-backdrop-open {
+    opacity: 1;
+}
+
+.mobile-menu-backdrop-close {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu-header {
+    @apply flex items-center justify-between w-full;
+}
+
+.menu-close-button {
+    @apply flex items-center justify-center text-2xl text-(--gray-900) bg-transparent border-0 cursor-pointer;
 }
 
 .mobile-menu ul {
-    @apply w-full flex flex-col items-start gap-7 mt-4 list-none p-0 m-0;
+    @apply w-full flex flex-col items-start gap-7 mt-10 list-none p-0 m-0;
 }

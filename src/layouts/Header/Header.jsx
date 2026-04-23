@@ -1,19 +1,70 @@
 import "./index.css";
+import personalImage from "../../../public/imgs/hero/personal_picture.webp";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { useEffect, useState } from "react";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import { useEffect, useRef, useState } from "react";
 import { MdOutlineHeadphones, MdOutlineWorkOutline } from "react-icons/md";
 import { IoBookOutline, IoPersonOutline } from "react-icons/io5";
 
+const MENU_ANIMATION_MS = 280;
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuMounted, setIsMenuMounted] = useState(false);
+  const closeTimeoutRef = useRef(null);
+  const animationFrameRef = useRef(null);
 
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const openMenu = () => {
+    if (closeTimeoutRef.current) {
+      window.clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+
+    if (!isMenuMounted) {
+      setIsMenuMounted(true);
+      animationFrameRef.current = window.requestAnimationFrame(() => {
+        setIsMenuOpen(true);
+      });
+      return;
+    }
+
+    setIsMenuOpen(true);
   };
 
-  const closeMenu = () => {
+  const closeMenu = (immediate = false) => {
     setIsMenuOpen(false);
+
+    if (animationFrameRef.current) {
+      window.cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
+
+    if (closeTimeoutRef.current) {
+      window.clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+
+    if (immediate) {
+      setIsMenuMounted(false);
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const unmountDelay = prefersReducedMotion ? 0 : MENU_ANIMATION_MS;
+
+    closeTimeoutRef.current = window.setTimeout(() => {
+      setIsMenuMounted(false);
+      closeTimeoutRef.current = null;
+    }, unmountDelay);
+  };
+
+  const handleMenuClick = () => {
+    if (isMenuOpen) {
+      closeMenu();
+      return;
+    }
+
+    openMenu();
   };
 
   useEffect(() => {
@@ -31,40 +82,86 @@ export default function Header() {
     return () => window.removeEventListener("keydown", handleEscapeKey);
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const handleBreakpointChange = (event) => {
+      if (event.matches) {
+        closeMenu(true);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleBreakpointChange);
+    return () => mediaQuery.removeEventListener("change", handleBreakpointChange);
+  }, []);
+
+  useEffect(() => {
+    if (!isMenuMounted) {
+      document.body.style.overflow = "";
+      return undefined;
+    }
+
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuMounted]);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        window.clearTimeout(closeTimeoutRef.current);
+      }
+      if (animationFrameRef.current) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+      }
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
     <header className="header">
-      <nav
-        className="flex justify-between items-center w-full max-w-7xl mx-auto px-8 md:px-4 lg:px-0"
-        aria-label="Primary"
-      >
-        <div className="text-2xl font-bold font-headline">
-          <Link
-            to="/"
-            className="text-transparent bg-clip-text bg-(--color-primary)"
-          >
-            Leonardo Pires
+      <nav className="header-nav" aria-label="Primary">
+        <div className="desktop-brand text-2xl font-bold font-headline md:text-3xl">
+          <Link to="/" className="desktop-avatar-link" aria-label="Go to homepage">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-1.5 rounded-full bg-[conic-gradient(from_35deg,var(--color-primary),var(--color-secondary),var(--color-primary))] animate-[spin_9s_linear_infinite] motion-reduce:animate-none"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-3 rounded-full bg-(--color-primary)/28 blur-md"
+            />
+            <img
+              src={personalImage}
+              alt=""
+              className="relative border-4 border-white rounded-full pointer-events-none"
+            />
           </Link>
         </div>
 
-        {/* ---- Desktop Menu ----*/}
-        <ul className="hidden md:flex flex-row items-center gap-10 font-body">
+        {/* ---- Desktop Sidebar Menu ----*/}
+        <ul className="desktop-menu font-body">
           <li>
-            <a href="/#featured-projects" className="nav-links">
+            <a href="/#featured-projects" className="nav-links desktop-nav-link">
+              <MdOutlineWorkOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
               Work
             </a>
           </li>
           <li>
-            <a href="/#about" className="nav-links">
+            <a href="/#about" className="nav-links desktop-nav-link">
+              <IoPersonOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
               About
             </a>
           </li>
           <li>
-            <a href="/#skills" className="nav-links">
+            <a href="/#skills" className="nav-links desktop-nav-link">
+              <IoBookOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
               Skills
             </a>
           </li>
           <li>
-            <a href="/#contact" className="nav-links-contact">
+            <a href="/#contact" className="nav-links-contact desktop-nav-link-contact">
+              <MdOutlineHeadphones aria-hidden="true" focusable="false" />
               Get in touch
             </a>
           </li>
@@ -83,66 +180,109 @@ export default function Header() {
         </button>
       </nav>
       {/* ---- Mobile Menu ---- */}
-      {isMenuOpen && (
-        <div className="mobile-menu" id="mobile-nav-menu">
-          <ul className="font-body" aria-label="Mobile navigation">
-            <li>
-              <a
-                href="/#featured-projects"
-                className="nav-links flex items-center gap-2"
+      {isMenuMounted && (
+        <>
+          <button
+            type="button"
+            className={`mobile-menu-backdrop ${isMenuOpen ? "mobile-menu-backdrop-open" : "mobile-menu-backdrop-close"}`}
+            aria-label="Close navigation menu"
+            onClick={closeMenu}
+          />
+
+          <div
+            className={`mobile-menu ${isMenuOpen ? "mobile-menu-open" : "mobile-menu-close"}`}
+            id="mobile-nav-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation menu"
+          >
+            <div className="mobile-menu-header">
+              <Link
+                to="/"
+                className="mobile-avatar-link"
                 onClick={closeMenu}
+                aria-label="Go to homepage"
               >
-                <MdOutlineWorkOutline
-                  size={20}
-                  className="text-(--gray-900)"
+                <span
                   aria-hidden="true"
-                  focusable="false"
+                  className="pointer-events-none absolute -inset-1 rounded-full bg-[conic-gradient(from_35deg,var(--color-primary),var(--color-secondary),var(--color-primary))] animate-[spin_9s_linear_infinite] motion-reduce:animate-none"
                 />
-                Work
-              </a>
-            </li>
-            <li>
-              <a
-                href="/#about"
-                className="nav-links flex items-center gap-2"
-                onClick={closeMenu}
-              >
-                <IoPersonOutline
-                  size={20}
-                  className="text-(--gray-900)"
-                  aria-hidden="true"
-                  focusable="false"
+                <img
+                  src={personalImage}
+                  alt=""
+                  className="relative w-12 h-12 object-cover border-2 border-(--color-primary) rounded-full pointer-events-none"
                 />
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/#skills"
-                className="nav-links flex items-center gap-2"
+              </Link>
+
+              <button
+                type="button"
+                className="menu-close-button"
                 onClick={closeMenu}
+                aria-label="Close menu"
               >
-                <IoBookOutline
-                  size={20}
-                  className="text-(--gray-900)"
-                  aria-hidden="true"
-                  focusable="false"
-                />
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                href="/#contact"
-                className="relative w-full flex justify-center items-center gap-2 font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2"
-                onClick={closeMenu}
-              >
-                <MdOutlineHeadphones aria-hidden="true" focusable="false" />
-                Get in touch
-              </a>
-            </li>
-          </ul>
-        </div>
+                <RxCross2 aria-hidden="true" focusable="false" />
+              </button>
+            </div>
+
+            <ul className="font-body" aria-label="Mobile navigation">
+              <li>
+                <a
+                  href="/#featured-projects"
+                  className="nav-links flex items-center gap-2"
+                  onClick={closeMenu}
+                >
+                  <MdOutlineWorkOutline
+                    size={26}
+                    className="text-(--gray-900)"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                  Work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#about"
+                  className="nav-links flex items-center gap-2"
+                  onClick={closeMenu}
+                >
+                  <IoPersonOutline
+                    size={26}
+                    className="text-(--gray-900)"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#skills"
+                  className="nav-links flex items-center gap-2"
+                  onClick={closeMenu}
+                >
+                  <IoBookOutline
+                    size={26}
+                    className="text-(--gray-900)"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#contact"
+                  className="relative w-full flex justify-center items-center gap-2 font-semibold text-(--gray-50) bg-(--color-primary) px-4 py-2 rounded-lg"
+                  onClick={closeMenu}
+                >
+                  <MdOutlineHeadphones size={24} aria-hidden="true" focusable="false" />
+                  Get in touch
+                </a>
+              </li>
+            </ul>
+          </div>
+        </>
       )}
     </header>
   );

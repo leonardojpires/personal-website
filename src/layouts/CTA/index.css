@@ -5,7 +5,7 @@
 }
 
 .cta-container {
-    @apply flex flex-col items-center text-center px-2 md:px-10 py-16 lg:rounded-3xl;
+    @apply flex flex-col items-center text-center px-2 md:px-10 py-16;
     background: #242242;
     background: radial-gradient(circle,rgba(36, 34, 66, 1) 24%, rgba(12, 12, 33, 1) 100%);
 }

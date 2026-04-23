@@ -1,5 +1,6 @@
 import "./index.css";
 import Hero from "../../layouts/Hero/Hero";
+import Presentation from './../../layouts/Presentation/Presentation';
 import About from './../../layouts/About/About';
 import CTA from './../../layouts/CTA/CTA';
 import { motion as Motion } from "framer-motion";
@@ -17,6 +18,8 @@ export default function Home() {
     return (
         <>
             <Hero />
+
+            <Presentation />
 
             <Motion.div {...sectionFade}>
                 <FeaturedProjects />

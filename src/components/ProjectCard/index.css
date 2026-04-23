@@ -10,14 +10,23 @@
 }
 
 .project-image {
-    @apply relative w-full h-64 overflow-hidden flex items-center justify-center;
+    @apply relative w-full h-64 overflow-hidden flex items-center justify-center bg-(--gray-200)/30;
 }
 
-.project-image img {
-    @apply w-full h-full object-cover object-center transition-transform duration-300 ease-out;
+.project-image-skeleton {
+    @apply absolute inset-0 bg-(--gray-300)/80 animate-pulse;
+    background: linear-gradient(90deg, rgba(229, 231, 235, 0.95), rgba(243, 244, 246, 0.95), rgba(229, 231, 235, 0.95));
 }
 
-.project-card:hover .project-image img {
+.project-image-photo {
+    @apply w-full h-full object-cover object-center transition-all duration-300 ease-out opacity-0;
+}
+
+.project-image-photo.opacity-100 {
+    @apply opacity-100;
+}
+
+.project-card:hover .project-image-photo {
     @apply scale-110;
 }
 

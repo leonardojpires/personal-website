@@ -1,29 +1,33 @@
 @import "tailwindcss";
 
+.hero-root {
+    @apply relative overflow-hidden;
+}
+
 .hero-section {
-    @apply relative w-[1200px] flex flex-col md:flex-row lg:items-center gap-10 lg:gap-20 px-5;
+    @apply relative z-10 w-[1200px] flex flex-col items-center justify-center gap-4 px-5;
 }
 
 .hero-buttons {
     @apply flex flex-row justify-center sm:justify-start gap-5 mt-10;
 }
 
-.hero-buttons > a:first-child {
-    @apply bg-(--color-primary) text-(--gray-50) px-6 py-4 rounded-lg cursor-pointer transition-transform duration-300 ease-in-out;
+.hero-button {
+    @apply inline-flex items-center justify-center gap-3 px-1.5 py-2 md:px-6 md:py-2.5 duration-300 ease-in-out;
 }
 
-.hero-buttons > a:last-child {
-    @apply bg-transparent border-2 border-(--gray-900) text-(--gray-900) px-6 py-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out;
+.button-view-projects {
+    @apply bg-(--color-primary) text-(--gray-50) rounded-lg cursor-pointer transition-transform;
 }
 
-.hero-buttons > a:first-child:hover {
-    @apply translate-y-[-3px] shadow-md;
+.button-download-cv {
+    @apply bg-transparent border-2 border-(--gray-900) text-(--gray-900) rounded-lg cursor-pointer transition-all;
 }
 
-.hero-buttons > a:last-child:hover {
-    @apply translate-y-[-3px] shadow-md bg-(--gray-900) text-(--gray-50);
+.button-view-projects:hover {
+    @apply -translate-y-0.75 shadow-md;
 }
 
-.hero-image {
-    @apply relative md:absolute w-full sm:w-[350px] md:w-[400px] lg:w-[550px] bottom-0 right-0;
+.button-download-cv:hover {
+    @apply -translate-y-0.75 shadow-md bg-(--gray-900) text-(--gray-50);
 }

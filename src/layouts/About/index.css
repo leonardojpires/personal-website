@@ -5,11 +5,11 @@
 }
 
 .about-container {
-    @apply flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center px-4;
 }
 
 .about-title {
-    @apply text-3xl text-(--gray-900) font-bold mb-8;;
+    @apply text-3xl text-(--gray-900) font-bold;
 }
 
 .about-subtitle {
@@ -17,7 +17,7 @@
 }
 
 .about-description {
-    @apply text-lg text-(--gray-700) max-w-2xl text-center mb-8;
+    @apply text-lg text-(--gray-700) max-w-2xl text-center mt-4 mb-8;
 }
 
 .about-skills {
