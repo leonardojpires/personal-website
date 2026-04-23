@@ -1,6 +1,7 @@
 import "./index.css";
 import cvFile from "../../assets/CV/CV.pdf";
 import HeroCards from "../../components/HeroCard/HeroCards";
+import SnowBackground from "../../components/SnowBackground/SnowBackground";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaRegClipboard } from "react-icons/fa";
 import { FaBookBookmark } from "react-icons/fa6";
@@ -10,9 +11,10 @@ import { motion as Motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
-      className="pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
+      className="hero-root pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
       aria-labelledby="home-hero-title"
     >
+      <SnowBackground />
       <div className="hero-section">
         <Motion.div
           className="w-full flex flex-col items-center text-center"

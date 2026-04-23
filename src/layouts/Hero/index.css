@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+.hero-root {
+    @apply relative overflow-hidden;
+}
+
 .hero-section {
-    @apply relative w-[1200px] flex flex-col items-center justify-center gap-4 px-5;
+    @apply relative z-10 w-[1200px] flex flex-col items-center justify-center gap-4 px-5;
 }
 
 .hero-buttons {
