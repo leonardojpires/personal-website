@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 .about-skill {
-    @apply bg-(--gray-50)/90 border border-(--gray-900)/15 backdrop-blur-2xl flex flex-col items-center rounded-lg shadow-md p-6 w-56 text-center min-h-[320px] transition-all duration-300 ease-in-out;
+    @apply bg-(--gray-50)/90 border border-(--gray-900)/15 backdrop-blur-2xl flex flex-col items-center rounded-lg shadow-md p-6 w-56 h-full text-center min-h-80 transition-all duration-300 ease-in-out;
 }
 
 .about-skill:hover {
     @apply shadow-lg transform scale-105 transition-all duration-300;
+}
+
+.about-skills li {
+    @apply h-full;
 }
 
 .about-skill span {
