@@ -95,7 +95,7 @@
 }
 
 .language-toggle-item {
-    @apply md:w-full flex justify-center;
+    @apply md:w-full flex justify-start md:justify-center;
 }
 
 .language-toggle {
@@ -141,6 +141,10 @@
 
 .language-toggle-separator {
     @apply text-(--gray-500);
+}
+
+.mobile-language-toggle-item {
+    @apply w-full flex justify-start mt-5;
 }
 
 .mobile-menu {

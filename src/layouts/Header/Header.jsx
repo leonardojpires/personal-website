@@ -258,7 +258,7 @@ export default function Header() {
                     aria-hidden="true"
                     focusable="false"
                   />
-                  {labels[lang].work}
+                  {translations[lang].nav.work}
                 </a>
               </li>
               <li>
@@ -273,7 +273,7 @@ export default function Header() {
                     aria-hidden="true"
                     focusable="false"
                   />
-                  {labels[lang].about}
+                  {translations[lang].nav.about}
                 </a>
               </li>
               <li>
@@ -288,7 +288,7 @@ export default function Header() {
                     aria-hidden="true"
                     focusable="false"
                   />
-                  {labels[lang].skills}
+                  {translations[lang].nav.skills}
                 </a>
               </li>
               <li>
@@ -298,8 +298,26 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <MdOutlineHeadphones size={24} aria-hidden="true" focusable="false" />
-                  {labels[lang].contact}
+                  {translations[lang].nav.contact}
                 </a>
+              </li>
+              <li className="language-toggle-item mobile-language-toggle-item">
+                <button
+                  type="button"
+                  className="language-toggle"
+                  onClick={toggleLang}
+                  aria-label={translations[lang].nav.toggleAria}
+                >
+                  <span className={`language-toggle-option ${lang === "en" ? "active" : ""}`} aria-hidden="true">
+                    EN
+                  </span>
+                  <span className="language-toggle-separator" aria-hidden="true">
+                    /
+                  </span>
+                  <span className={`language-toggle-option ${lang === "pt" ? "active" : ""}`} aria-hidden="true">
+                    PT
+                  </span>
+                </button>
               </li>
             </ul>
           </div>
