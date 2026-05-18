@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FaCodeBranch } from "react-icons/fa6";
 import { GrDeploy } from "react-icons/gr";
+import { useLanguage } from "@/context/useLanguage";
+import { translations } from "@/data/translations";
 
 export default function ProjectCard({
   id,
@@ -14,6 +16,7 @@ export default function ProjectCard({
   github,
   url,
 }) {
+  const { lang } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
   const isProjectsPage = location.pathname === "/projects";
@@ -39,7 +42,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               aria-label={`View ${title}`}
             >
-              View Project
+              { translations[lang].projectCard.focusButton }
             </a>
           ) : (
             <span className="project-overlay-disabled" aria-disabled="true">
@@ -76,7 +79,7 @@ export default function ProjectCard({
               aria-label={`Open ${title} source code repository`}
             >
               <FaCodeBranch aria-hidden="true" focusable="false" />
-              Code
+              { translations[lang].projectCard.sourceCode }
             </a>
             {url ? (
               <a
@@ -87,7 +90,7 @@ export default function ProjectCard({
                 aria-label={`Open ${title} live demo`}
               >
                 <GrDeploy aria-hidden="true" focusable="false" />
-                Live Demo
+                { translations[lang].projectCard.liveDemo }
               </a>
             ) : null}
           </div>

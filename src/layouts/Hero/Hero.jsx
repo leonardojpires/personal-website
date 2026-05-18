@@ -7,8 +7,12 @@ import { FaRegClipboard } from "react-icons/fa";
 import { FaBookBookmark } from "react-icons/fa6";
 import { LuDownload } from "react-icons/lu";
 import { motion as Motion } from "framer-motion";
+import { translations } from "@/data/translations";
+import { useLanguage } from "@/context/useLanguage";
 
 export default function Hero() {
+  const { lang } = useLanguage();
+
   return (
     <section
       className="hero-root pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
@@ -29,19 +33,19 @@ export default function Hero() {
             className="font-bold text-5xl md:text-7xl text-(--gray-900) mt-5 font-headline"
             id="home-hero-title"
           >
-            Shaping Dreams Into Real{" "}
+            { translations[lang].hero.pre_title }{" "}
             <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
-              Web Experiences
+              { translations[lang].hero.title }
             </span>
           </h1>
           <p className="md:text-lg text-(--gray-500) mt-5 font-body md:w-2/3">
-            I architect and build robbust web applications from idea to production — working on both back-end systems and user-facing interfaces, with a focus on performance and scalability
+              { translations[lang].hero.description }
           </p>
           <div className="hero-buttons font-bold">
             <div className="hero-button button-view-projects flex gap-4">
               <FaRegClipboard size={20}/> 
               <a href="#featured-projects">
-                View Projects
+                { translations[lang].hero.viewProjects }
               </a>
             </div>
             
@@ -53,7 +57,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 aria-label="Download Leonardo Pires CV as PDF"
               >
-                Download CV
+                { translations[lang].hero.downloadCV }
               </a>
             </div>
           </div>

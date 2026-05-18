@@ -1,9 +1,12 @@
 import "./index.css";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/context/useLanguage";
 import footerLinks from "../../data/footer-links-data";
 import socialLinks from "../../data/social-links-data";
+import { translations } from "@/data/translations";
 
 export default function Footer() {
+  const { lang } = useLanguage();
   const currentYear = new Date().getFullYear();
   const isExternalLink = (url) => /^(https?:|mailto:)/.test(url);
   const isDocumentLink = (url) => /\.pdf(\?|$)/i.test(url);
@@ -19,12 +22,12 @@ export default function Footer() {
               Leonardo Pires
             </Link>
             <p className="footer-tagline font-body">
-              Crafting digital experiences with precision & creativity
+              { translations[lang].footer.tagline }
             </p>
           </div>
 
           <div className="footer-links">
-            {Object.entries(footerLinks).map(([category, links]) => (
+            {Object.entries(footerLinks[lang]).map(([category, links]) => (
               <div key={category} className="footer-links-column">
                 <h4 className="footer-column-title font-headline">{category}</h4>
                 <ul className="footer-links-list">
@@ -62,7 +65,7 @@ export default function Footer() {
         {/* Bottom Section - Socials & Copyright */}
         <div className="footer-bottom">
           <p className="footer-copyright font-body">
-            © {currentYear} Leonardo Pires. All rights reserved.
+            © {currentYear} { translations[lang].footer.copyright }.
           </p>
 
           <div className="footer-socials">

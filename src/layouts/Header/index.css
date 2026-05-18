@@ -94,6 +94,55 @@
     @apply -translate-y-0.5 shadow-md;
 }
 
+.language-toggle-item {
+    @apply md:w-full flex justify-center;
+}
+
+.language-toggle {
+    @apply inline-flex items-center justify-center gap-2 text-sm font-semibold text-(--gray-900) transition-colors duration-200;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+    @apply text-(--color-primary);
+    outline: none;
+}
+
+.language-toggle-option {
+    position: relative;
+    transition: color 200ms ease, transform 200ms ease;
+}
+
+.language-toggle-option.active {
+    @apply text-(--color-primary);
+}
+
+.language-toggle-option::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: 999px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease;
+}
+
+.language-toggle-option.active::after {
+    transform: scaleX(1);
+}
+
+.language-toggle-separator {
+    @apply text-(--gray-500);
+}
+
 .mobile-menu {
     @apply fixed top-0 left-0 h-screen w-72 max-w-[85vw] bg-(--gray-50)/95 backdrop-blur-lg p-6 shadow-2xl border-r border-white/40 md:hidden z-60 flex flex-col;
     opacity: 0;

@@ -1,8 +1,11 @@
+import { LanguageProvider } from './context/LanguageProvider'
 import AppRoutes from './routes/routes'
 
 function App() {
   return (
-    <AppRoutes />
+    <LanguageProvider>
+      <AppRoutes />
+    </LanguageProvider>
   )
 }
 

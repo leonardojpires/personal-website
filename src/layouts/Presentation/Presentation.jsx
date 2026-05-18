@@ -7,8 +7,12 @@ import {
 } from "react-icons/io5";
 import { IoIosBookmarks, IoIosGitNetwork } from "react-icons/io";
 import { MdComputer } from "react-icons/md";
+import { translations } from "@/data/translations";
+import { useLanguage } from "@/context/useLanguage";
 
 export default function Presentation() {
+  const { lang } = useLanguage();
+
   return (
     <section className="presentation-section">
       <Motion.div
@@ -21,7 +25,7 @@ export default function Presentation() {
           Leonardo Pires
         </h2>
         <p className="presentation-description font-body">
-          Coding is only one part of the process. I start by identifying the real problems, then design and architect scalable solutions before implementing them. Every step matters, from <strong>understanding</strong> the problem to delivering the final product.
+          { translations[lang].presentation.description }
         </p>
 
         <div className="presentation-grid">
@@ -36,8 +40,8 @@ export default function Presentation() {
                   focusable="false"
                 />
               }
-              title="Intern at DIS"
-              description="Currently working as a Full-Stack Developer at Digital Innovaition Systems"
+              title={translations[lang].presentation.cards.experience.title}
+              description={translations[lang].presentation.cards.experience.description}
             />
           </div>
 
@@ -52,8 +56,8 @@ export default function Presentation() {
                   focusable="false"
                 />
               }
-              title="2+ Years Learning"
-              description="Continuosly learning and expanding my skillet"
+              title={translations[lang].presentation.cards.learning.title}
+              description={translations[lang].presentation.cards.learning.description}
             />
 
             <HeroCards
@@ -66,8 +70,8 @@ export default function Presentation() {
                   focusable="false"
                 />
               }
-              title="10+ Projects"
-              description="Developed multiple full-stack applications using modern web technologies"
+              title={translations[lang].presentation.cards.projects.title}
+              description={translations[lang].presentation.cards.projects.description}
             />
           </div>
         </div>

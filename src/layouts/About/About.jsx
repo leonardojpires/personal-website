@@ -3,20 +3,24 @@ import skillsData from "../../data/skills-data";
 import SkillsCard from "../../components/SkillsCard/SkillsCard";
 import KeyPointsCard from './../../components/KeyPointsCard/KeyPointsCard';
 import keyPointsData from './../../data/key-points-data';
+import { useLanguage } from "@/context/useLanguage";
+import { translations } from "@/data/translations";
 
 export default function About() {
+  const { lang } = useLanguage();
+
   return (
     <section id="about" className="about-section" aria-labelledby="about-title">
       <div className="about-container">
-        <h2 className="about-title font-headline" id="about-title">About Me</h2>
+        <h2 className="about-title font-headline" id="about-title">{ translations[lang].about.sectionTitle }</h2>
         {/* <span className="about-subtitle font-body">
           Turning Ideas Into Code
         </span> */}
         <p className="about-description font-body">
-          With over 2 years experience in full-stack development, I am specialized in building scalable and scalable web applications that deliver exceptional user experiences and measurable business value. My approach combines technical expertise with a deep understanding of user needs 
+          { translations[lang].about.description }
         </p>
         <ul className="about-skills" id="skills" aria-label="Core skills">
-          {skillsData.map((skill) => (
+          {skillsData[lang].map((skill) => (
             <li key={skill.id} className="list-none">
               <SkillsCard
                 icon={skill.icon}
@@ -28,7 +32,7 @@ export default function About() {
         </ul>
 
         <ul className="about-key-points" aria-label="What I focus on">
-          {keyPointsData.map((point) => (
+          {keyPointsData[lang].map((point) => (
             <li key={point.id} className="list-none about-key-point-item">
               <KeyPointsCard icon={point.icon} title={point.title} description={point.description} />
             </li>

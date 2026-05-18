@@ -5,10 +5,13 @@ import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineHeadphones, MdOutlineWorkOutline } from "react-icons/md";
 import { IoBookOutline, IoPersonOutline } from "react-icons/io5";
+import { useLanguage } from "@/context/useLanguage";
+import { translations } from "@/data/translations";
 
 const MENU_ANIMATION_MS = 280;
 
 export default function Header() {
+  const { lang, toggleLang } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuMounted, setIsMenuMounted] = useState(false);
   const closeTimeoutRef = useRef(null);
@@ -144,26 +147,44 @@ export default function Header() {
           <li>
             <a href="/#featured-projects" className="nav-links desktop-nav-link">
               <MdOutlineWorkOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
-              Work
+              {translations[lang].nav.work}
             </a>
           </li>
           <li>
             <a href="/#about" className="nav-links desktop-nav-link">
               <IoPersonOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
-              About
+              {translations[lang].nav.about}
             </a>
           </li>
           <li>
             <a href="/#skills" className="nav-links desktop-nav-link">
               <IoBookOutline aria-hidden="true" focusable="false" className="nav-link-icon" />
-              Skills
+              {translations[lang].nav.skills}
             </a>
           </li>
           <li>
             <a href="/#contact" className="nav-links-contact desktop-nav-link-contact">
               <MdOutlineHeadphones aria-hidden="true" focusable="false" />
-              Get in touch
+              {translations[lang].nav.contact}
             </a>
+          </li>
+          <li className="language-toggle-item">
+            <button
+              type="button"
+              className="language-toggle"
+              onClick={toggleLang}
+              aria-label={translations[lang].nav.toggleAria}
+            >
+              <span className={`language-toggle-option ${lang === "en" ? "active" : ""}`} aria-hidden="true">
+                EN
+              </span>
+              <span className="language-toggle-separator" aria-hidden="true">
+                /
+              </span>
+              <span className={`language-toggle-option ${lang === "pt" ? "active" : ""}`} aria-hidden="true">
+                PT
+              </span>
+            </button>
           </li>
         </ul>
 
@@ -237,7 +258,7 @@ export default function Header() {
                     aria-hidden="true"
                     focusable="false"
                   />
-                  Work
+                  {labels[lang].work}
                 </a>
               </li>
               <li>
@@ -252,7 +273,7 @@ export default function Header() {
                     aria-hidden="true"
                     focusable="false"
                   />
-                  About
+                  {labels[lang].about}
                 </a>
               </li>
               <li>
@@ -267,7 +288,7 @@ export default function Header() {
                     aria-hidden="true"
                     focusable="false"
                   />
-                  Skills
+                  {labels[lang].skills}
                 </a>
               </li>
               <li>
@@ -277,7 +298,7 @@ export default function Header() {
                   onClick={closeMenu}
                 >
                   <MdOutlineHeadphones size={24} aria-hidden="true" focusable="false" />
-                  Get in touch
+                  {labels[lang].contact}
                 </a>
               </li>
             </ul>
