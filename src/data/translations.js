@@ -12,6 +12,7 @@ export const translations = {
       contact: "Get in touch",
     },
     hero: {
+      tagline: "Full-Stack Web Developer & Freelancer",
       pre_title: "Shaping Dreams Into Real",
       title: "Web Experiences",
       description:
@@ -87,6 +88,7 @@ export const translations = {
       contact: "Contacte Me",
     },
     hero: {
+      tagline: "Desenvolvedor Web Full-Stack & Freelancer",
       pre_title: "A Transformar Sonhos em ",
       title: "Experiências Web",
       description:

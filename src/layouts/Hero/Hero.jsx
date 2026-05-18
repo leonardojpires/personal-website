@@ -27,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
           <span className="tracking-widest uppercase font-bold text-xs md:text-sm text-(--color-primary) font-body text-center bg-(--color-secondary)/10 px-3 py-1 rounded-full bg-clip-border">
-            Full-stack Web Developer & Freelancer
+            { translations[lang].hero.tagline }
           </span>
           <h1
             className="font-bold text-5xl md:text-7xl text-(--gray-900) mt-5 font-headline"
