@@ -13,7 +13,7 @@ export const translations = {
     },
     hero: {
       tagline: "Full-Stack Web Developer & Freelancer",
-      pre_title: "Shaping Dreams Into Real",
+      pre_title: "Shaping Dreams Into Real ",
       title: "Web Experiences",
       description:
         "I architect and build robust web applications from idea to production — working on both back-end systems and user-facing interfaces, with a focus on performance and scalability.",
