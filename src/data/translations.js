@@ -89,7 +89,7 @@ export const translations = {
     },
     hero: {
       tagline: "Desenvolvedor Web Full-Stack & Freelancer",
-      pre_title: "A Transformar Sonhos em ",
+      pre_title: "A Transformar Sonhos Em ",
       title: "Experiências Web",
       description:
         "Arquiteto e construo aplicações web robustas desde a ideia até à produção — atuando tanto em sistemas back-end quanto em interfaces do utilizador, com foco em desempenho e escalabilidade.",
