@@ -9,7 +9,7 @@ export const translations = {
       work: "Work",
       about: "About",
       skills: "Skills",
-      contact: "Get in touch",
+      contact: "Contact",
     },
     hero: {
       tagline: "Full-Stack Web Developer & Freelancer",
@@ -55,7 +55,7 @@ export const translations = {
       headline: "Let's Build Something Exceptional",
       description:
         "Available for freelance projects, consulting work, and full-time opportunities. Let's discuss how we can work together to bring your ideas to life!",
-      button: "Contact Me",
+      button: "Get In Touch",
     },
     projectsPage: {
       title: "Projects' Library",
@@ -85,7 +85,7 @@ export const translations = {
       work: "Trabalho",
       about: "Sobre",
       skills: "Habilidades",
-      contact: "Contacte Me",
+      contact: "Contacto",
     },
     hero: {
       tagline: "Desenvolvedor Web Full-Stack & Freelancer",

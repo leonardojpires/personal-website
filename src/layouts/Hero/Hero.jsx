@@ -33,7 +33,7 @@ export default function Hero() {
             className="font-bold text-5xl md:text-7xl text-(--gray-900) mt-5 font-headline"
             id="home-hero-title"
           >
-            { translations[lang].hero.pre_title }{" "}
+            { translations[lang].hero.pre_title } <br />
             <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
               { translations[lang].hero.title }
             </span>
