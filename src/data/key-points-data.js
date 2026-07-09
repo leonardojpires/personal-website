@@ -32,21 +32,21 @@ const keyPointsData = {
       icon: FaLightbulb,
       title: "Clareza de produto",
       description:
-        "Ajudo a transformar ideias vagas em escopo util, prioridades claras e uma primeira versao pronta para lancar.",
+        "Ajudo a transformar ideias vagas num escopo útil, prioridades claras e uma primeira versão pronta para ser lançada.",
     },
     {
       id: 2,
       icon: FaPencilRuler,
-      title: "Apresentacao profissional",
+      title: "Apresentação profissional",
       description:
-        "As interfaces sao pensadas para parecerem crediveis, responsivas, legiveis e faceis de usar.",
+        "As interfaces são pensadas para serem credíveis, responsivas, legíveis e fáceis de utilizar.",
     },
     {
       id: 3,
       icon: GrPerformance,
-      title: "Entrega sustentavel",
+      title: "Entrega sustentável",
       description:
-        "O codigo e organizado para futuras alteracoes, handoff pratico e melhorias depois do lancamento.",
+        "O código é organizado para futuras alterações, handoff prático e melhorias depois do lançamento.",
     },
   ],
 };

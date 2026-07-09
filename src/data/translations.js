@@ -130,20 +130,20 @@ export const translations = {
     nav: {
       work: "Trabalho",
       about: "Sobre",
-      skills: "Habilidades",
+      skills: "Competências",
       contact: "Contacto",
-      toggleAria: "Mudar idioma",
+      toggleAria: "Alterar linguagem",
     },
     hero: {
       tagline: "Desenvolvedor Web Full-Stack & Freelancer",
       pre_title: "A Transformar Sonhos Em ",
-      title: "Experiencias Web",
+      title: "Experiências Web",
       description:
-        "Arquiteto e construo aplicacoes web robustas desde a ideia ate a producao - atuando tanto em sistemas back-end quanto em interfaces do utilizador, com foco em desempenho e escalabilidade.",
+        "Arquiteto e construo aplicações web robustas desde a ideia até à produção - atuando tanto em sistemas back-end quanto em interfaces de utilizador, com foco em desempenho e escalabilidade.",
       viewProjects: "Ver Projetos",
       downloadCV: "Descarregar CV",
-      availability: "Disponivel para projetos freelance",
-      response: "Resposta normal em ate 24 horas",
+      availability: "Disponível para projetos freelance",
+      response: "Resposta normal até 24 horas",
       stats: [
         { value: "10+", label: "Projetos entregues" },
         { value: "2+", label: "Anos a construir" },
@@ -154,49 +154,49 @@ export const translations = {
       eyebrow: "Como trabalho",
       title: "Leonardo Pires",
       description:
-        "Programar e apenas uma parte do processo. Eu comeco por identificar os problemas, e entao planeio e arquiteto solucoes escalaveis antes de as implementar. Cada passo importa, desde entender o problema ate entregar o produto final.",
+        "Programar é apenas uma parte do processo. Eu começo por identificar os problemas, e, então, planeio e arquiteto soluções escaláveis antes de as implementar. Cada passo importa, desde entender o problema até entregar o produto final.",
       cards: {
         experience: {
-          title: "Estagiario na DIS",
+          title: "Estagiário na DIS",
           description:
             "Atualmente a trabalhar como um Desenvolvedor Full-Stack na Digital Innovation Systems",
         },
         learning: {
           title: "2+ Anos de Aprendizagem",
           description:
-            "A aprender e expandir continuamente as minhas habilidades",
+            "Estou sempre a aprender e a expandir continuamente as minhas habilidades e conhecimentos",
         },
         projects: {
           title: "+10 Projetos",
           description:
-            "Desenvolvi multiplas aplicacoes full-stack com tecnologias web modernas",
+            "Desenvolvi múltiplas aplicações full-stack com tecnologias web modernas a partir de casos de estudo",
         },
       },
       methodology: {
         eyebrow: "Metodologia",
         title: "Da primeira ideia a um produto pronto para usar",
         description:
-          "Um fluxo pratico para transformar requisitos pouco claros em aplicacoes web estruturadas e faceis de manter.",
+          "Um fluxo prático para transformar requisitos pouco claros em aplicações web estruturadas e fáceis de manter.",
         steps: [
           {
             title: "Descobrir",
             description:
-              "Entender o objetivo, publico, problema principal e o que a primeira versao util precisa de alcançar.",
+              "Entender o objetivo, público, problema principal e o que a primeira versão útil precisa de alcançar.",
           },
           {
             title: "Planear",
             description:
-              "Definir estrutura, fluxo do utilizador, modelo de dados, escopo tecnico e prioridades de entrega.",
+              "Definir estrutura, fluxo do utilizador, modelo de dados, escopo técnico e prioridades de entrega.",
           },
           {
             title: "Construir",
             description:
-              "Implementar interface, logica back-end, integracoes e detalhes responsivos com codigo reutilizavel.",
+              "Implementar interface, lógica do sistema, integrações e detalhes responsivos com código reutilizável.",
           },
           {
             title: "Refinar",
             description:
-              "Testar a experiencia, melhorar performance, polir casos limite e preparar o projeto para deploy.",
+              "Testar a experiência, melhorar a performance, polir casos limite e preparar o projeto para deploy.",
           },
         ],
       },
@@ -205,46 +205,46 @@ export const translations = {
       eyebrow: "Trabalho selecionado",
       title: "Projetos em destaque",
       description:
-        "Uma selecao de aplicacoes web com fluxos de utilizador, decisoes tecnicas e contexto de produto.",
+        "Uma seleção de aplicações web com fluxos de utilizador, decisões técnicas e contexto de produto.",
       viewAll: "Ver todos os projetos",
     },
     about: {
-      eyebrow: "Competencias",
+      eyebrow: "Competências",
       sectionTitle: "Sobre mim",
       description:
-        "Com mais de 2 anos de experiencia em desenvolvimento full-stack, sou especializado em construir aplicacoes web escalaveis que proporcionam experiencias de utilizador excepcionais e valor comercial. A minha abordagem combina conhecimentos tecnicos com uma compreensao profunda das necessidades do utilizador",
-      coreSkillsLabel: "Habilidades principais",
+        "Com mais de 2 anos de experiência em desenvolvimento full-stack, sou especializado em construir aplicações web escaláveis que proporcionam experiências de utilizador excepcionais e com valor comercial. A minha abordagem combina conhecimentos técnicos com uma compreensão profunda das necessidades de cada utilizador",
+      coreSkillsLabel: "Competências principais",
     },
     cta: {
-      eyebrow: "Comecar projeto",
+      eyebrow: "Começar projeto",
       headline: "Vamos construir algo excepcional",
       description:
-        "Disponivel para projetos freelance, consultoria e oportunidades em tempo integral. Vamos conversar sobre como podemos transformar suas ideias em realidade!",
+        "Disponível para projetos freelance, consultoria e oportunidades em tempo integral. Vamos conversar sobre como podemos transformar as suas ideias em realidade!",
       button: "Entre em Contacto",
     },
     projectsPage: {
       title: "Biblioteca de Projetos",
-      total: "Uma colecao do meu trabalho | {totalProjects} projetos",
+      total: "Uma coleção do meu trabalho | {totalProjects} projetos",
       description:
-        "Uma demonstracao das minhas aplicacoes web, projetadas para destacar os detalhes da experiencia, arquitetura e alojamento por de tras de cada projeto.",
+        "Uma demonstração das minhas aplicações web, projetadas para destacar os detalhes da experiência, arquitetura e alojamento por de trás de cada projeto.",
       backButton: "Voltar para a pagina inicial",
     },
     contactPage: {
       title: "Contacto",
       description:
-        "Estou disponivel para websites freelance, dashboards, MVPs e colaboracoes.",
-      emailLabel: "Enviar email para Leonardo Pires",
+        "Estou disponível para websites freelance, dashboards, CRMs, MVPs e colaborações.",
+      emailLabel: "Enviar e-mail para Leonardo Pires",
       button: "Enviar email",
     },
     footer: {
-      tagline: "A criar experiencias digitais com precisao e criatividade",
+      tagline: "Experiências digitais com precisão e criatividade",
       copyright: "Leonardo Pires. Todos os direitos reservados.",
     },
     projectCard: {
       focusButton: "Ver projeto",
-      sourceCode: "Codigo fonte",
+      sourceCode: "Código fonte",
       liveDemo: "Demo online",
-      noDemo: "Demo indisponivel",
+      noDemo: "Demo indísponivel",
       comingSoon: "Projeto em breve",
     },
   },

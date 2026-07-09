@@ -60,7 +60,7 @@ const projectsData = {
       type: "Fitness e Bem-estar",
       title: "Fit Fetch",
       description:
-        "Aplicativo de fitness que ajuda o usuario a criar e acompanhar planos personalizados de treino e alimentacao com base em seus objetivos, preferencias e estilo de vida.",
+        "Aplicação de fitness que ajuda o utilizador a criar e acompanhar planos personalizados de treino e alimentação com base nos seus objetivos, preferências e estilo de vida.",
       technologies: ["React.js", "TailwindCSS", "Node.js", "Express.js", "Sequelize", "MySQL", "Firebase", "MVC Architecture"],
       image: FitFetchImage,
       github: "https://github.com/leonardojpires/fit-fetch",
@@ -69,10 +69,10 @@ const projectsData = {
     },
     {
       id: 2,
-      type: "Musica e Entretenimento",
+      type: "Música e Entretenimento",
       title: "Vibraze",
       description:
-        "Aplicativo de musica que fornece informacoes sobre artistas e suas discografias nas industrias de rock e metal, permitindo aos usuarios explorar e conhecer melhor suas bandas e artistas favoritos.",
+        "Plataforma informativa de música que fornece informações sobre artistas e as suas discografias nas indústrias de rock e metal, permitindo os utilizadores explorarem e conhecerem melhor as suas as bandas e artistas preferidos.",
       technologies: ["Laravel", "Blade", "Eloquent", "MySQL", "MVC Architecture"],
       image: VibrazeImage,
       github: "https://github.com/leonardojpires/vibraze",
@@ -81,10 +81,10 @@ const projectsData = {
     },
     {
       id: 3,
-      type: "Noticias de Jogos e Comunidade",
+      type: "Notícias de Jogos e Comunidade",
       title: "Site Bravatta Roleplay",
       description:
-        "Site criado para uma comunidade roleplay, fornecendo informacoes sobre o servidor, regras e eventos. Inclui um painel administrativo para gerenciar conteudo e noticias relacionadas.",
+        "Site criado para uma comunidade roleplay, fornecendo informações sobre o servidor, regras e eventos. Inclui um painel administrativo para gerir o conteúdo e notícias relacionadas.",
       technologies: ["PHP", "PDO", "MySQL", "MVC Architecture"],
       image: BravattaImage,
       github: "https://github.com/leonardojpires/bravatta-roleplay",
@@ -96,7 +96,7 @@ const projectsData = {
       type: "Interatividade e Entretenimento",
       title: "Kick It",
       description:
-        "Um jogo de adivinhacao de palavras onde os jogadores podem entrar e gerenciar salas de jogo, escolher as palavras a serem adivinhadas e competir entre si. Este projeto foi desenvolvido como um jogo de simulacao movel.",
+        "Um jogo de adivinhar palavras onde os jogadores podem entrar e gerir salas de jogo, escolher as palavras para serem adivinhadas e competir entre si. Este projeto foi desenvolvido como um jogo de simulação móvel.",
       technologies: ["Laravel", "Blade", "Eloquent", "MySQL", "MVC Architecture"],
       image: KickItImage,
       github: "https://github.com/leonardojpires/kick-it",

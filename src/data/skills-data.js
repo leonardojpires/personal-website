@@ -59,7 +59,7 @@ const skillsData = {
       id: 1,
       icon: LuAtom,
       title: "Front-end",
-      skills: ["JavaScript & React.js", "React Hooks", "Context API", "TailwindCSS", "SEO Optimization"],
+      skills: ["JavaScript & React.js", "React Hooks", "Context API", "TailwindCSS", "Otimização SEO"],
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ const skillsData = {
       id: 3,
       icon: FaDatabase,
       title: "Database",
-      skills: ["MySQL & Sequelize", "MongoDB", "Firebase", "Transacoes ACID"],
+      skills: ["MySQL & Sequelize", "MongoDB", "Firebase", "Transações ACID"],
     },
     {
       id: 4,
@@ -82,20 +82,20 @@ const skillsData = {
     {
       id: 5,
       icon: MdOutlineSecurity,
-      title: "Autenticacao & Autorizacao",
-      skills: ["Autenticacao JWT", "Controle de Acesso Baseado em Funcao", "Sessao & Autenticacao por Cookie"],
+      title: "Autentição & Autorização",
+      skills: ["Autenticação JWT", "Controlo de Acesso", "Sessão & Autenticação por Cookie"],
     },
     {
       id: 6,
       icon: MdBuild,
       title: "Arquitetura de Software",
-      skills: ["Model-View-Controller", "Arquitetura em Camadas", "Pattern Repository", "Separacao de Responsabilidades"],
+      skills: ["Model-View-Controller", "Arquitetura em Camadas", "Pattern Repository", "Separação de Responsabilidades"],
     },
     {
       id: 7,
       icon: MdBuild,
-      title: "Integracao de IA",
-      skills: ["Prompt Engineering", "Integracao Groq AI", "Aplicacoes com IA"],
+      title: "Integração de IA",
+      skills: ["Prompt Engineering", "Integração Groq AI", "Aplicações com IA"],
     },
     {
       id: 8,

@@ -21,10 +21,10 @@ const footerLinks = {
     ],
   },
   pt: {
-    Navegacao: [
+    Navegação: [
       { label: "Inicio", url: "/" },
       { label: "Projetos", url: "/#featured-projects" },
-      { label: "Competencias", url: "/#skills" },
+      { label: "Competências", url: "/#skills" },
       { label: "Contacto", url: "/#contact" },
     ],
     Recursos: [
