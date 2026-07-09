@@ -22,7 +22,7 @@ const footerLinks = {
   },
   pt: {
     Navegação: [
-      { label: "Inicio", url: "/" },
+      { label: "Início", url: "/" },
       { label: "Projetos", url: "/#featured-projects" },
       { label: "Competências", url: "/#skills" },
       { label: "Contacto", url: "/#contact" },
