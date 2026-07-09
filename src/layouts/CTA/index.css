@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
 .cta-section {
-    @apply mt-20 mb-20 mx-auto;
+    @apply my-20 px-4 md:px-10;
 }
 
 .cta-container {
-    @apply flex flex-col items-center text-center px-2 md:px-10 py-16;
-    background: #242242;
-    background: radial-gradient(circle,rgba(36, 34, 66, 1) 24%, rgba(12, 12, 33, 1) 100%);
+    @apply max-w-[1180px] mx-auto flex flex-col items-start text-left px-6 md:px-10 py-12 md:py-16 rounded-lg overflow-hidden;
+    background:
+        linear-gradient(135deg, rgba(17, 24, 39, 0.98) 0%, rgba(30, 64, 175, 0.94) 64%, rgba(15, 118, 110, 0.92) 100%);
+}
+
+.cta-eyebrow {
+    @apply text-xs uppercase tracking-[0.18em] font-bold text-teal-200;
 }
 
 .cta-title {
-    @apply text-(--gray-50) font-bold text-4xl md:text-5xl mb-6;
+    @apply text-(--gray-50) font-black text-3xl md:text-5xl mt-4 mb-5 leading-tight max-w-3xl;
 }
 
 .cta-description {
-    @apply text-(--gray-200) text-lg mb-8
+    @apply text-(--gray-200) text-base md:text-lg mb-8 leading-8 max-w-3xl;
 }
 
 .cta-button {
-    @apply bg-(--color-primary) text-(--gray-50) px-6 py-3 rounded-lg font-semibold transition-transform transition-shadow duration-300 cursor-pointer;
-    box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.3);
+    @apply bg-white text-(--gray-900) px-6 py-3 rounded-lg font-semibold transition-all duration-200 cursor-pointer shadow-lg shadow-slate-950/20;
 }
 
 .cta-button:hover {
-    @apply translate-y-[-2px];
-    box-shadow: 0 0 30px rgba(var(--color-primary-rgb), 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+    @apply -translate-y-0.5 shadow-xl;
 }

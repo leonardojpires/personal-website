@@ -33,7 +33,7 @@ const skillsData = {
       id: 5,
       icon: MdOutlineSecurity,
       title: "Authentication & Authorization",
-      skills: ["JWT Authetication", "Role-Based Access Control", "Session & Cookie Authentication"],
+      skills: ["JWT Authentication", "Role-Based Access Control", "Session & Cookie Authentication"],
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ const skillsData = {
       id: 3,
       icon: FaDatabase,
       title: "Database",
-      skills: ["MySQL & Sequelize", "MongoDB", "Firebase", "Transações ACID"],
+      skills: ["MySQL & Sequelize", "MongoDB", "Firebase", "Transacoes ACID"],
     },
     {
       id: 4,
@@ -82,26 +82,26 @@ const skillsData = {
     {
       id: 5,
       icon: MdOutlineSecurity,
-      title: "Autenticação & Autorização",
-      skills: ["Autenticação JWT", "Controle de Acesso Baseado em Função", "Sessão & Autenticação por Cookie"],
+      title: "Autenticacao & Autorizacao",
+      skills: ["Autenticacao JWT", "Controle de Acesso Baseado em Funcao", "Sessao & Autenticacao por Cookie"],
     },
     {
       id: 6,
       icon: MdBuild,
       title: "Arquitetura de Software",
-      skills: ["Model-View-Controller", "Arquitetura em Camadas", "Pattern Repository", "Separação de Responsabilidades"],
+      skills: ["Model-View-Controller", "Arquitetura em Camadas", "Pattern Repository", "Separacao de Responsabilidades"],
     },
     {
       id: 7,
       icon: MdBuild,
-      title: "Integração de IA",
-      skills: ["Prompt Engineering", "Integração Groq AI", "Aplicações com IA"],
+      title: "Integracao de IA",
+      skills: ["Prompt Engineering", "Integracao Groq AI", "Aplicacoes com IA"],
     },
     {
       id: 8,
       icon: IoIosColorPalette,
       title: "UI/UX Design",
-      skills: ["Figma", "Design Responsivo", "Acessibilidade & Boas Práticas", "Design Mobile-First"],
+      skills: ["Figma", "Design Responsivo", "Acessibilidade & Boas Praticas", "Design Mobile-First"],
     },
   ],
 };

@@ -1,33 +1,124 @@
 @import "tailwindcss";
 
 .hero-root {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden flex justify-center min-h-screen px-4 pt-28 pb-16 md:pt-20;
+    background:
+        linear-gradient(135deg, rgba(248, 250, 252, 0.98) 0%, rgba(239, 246, 255, 0.92) 50%, rgba(240, 253, 250, 0.86) 100%);
+}
+
+.hero-root::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(180deg, black 0%, transparent 82%);
 }
 
 .hero-section {
-    @apply relative z-10 w-[1200px] flex flex-col items-center justify-center gap-4 px-5;
+    @apply relative z-10 w-full max-w-[1200px] flex justify-center items-center gap-10;
+}
+
+.hero-copy {
+    @apply w-full flex flex-col items-center text-left;
+}
+
+.hero-title {
+    @apply mt-5 max-w-5xl text-5xl md:text-6xl lg:text-7xl font-black text-(--gray-900) text-center leading-[0.96];
+}
+
+.hero-title span {
+    @apply block text-(--color-primary);
+}
+
+.hero-description {
+    @apply mt-6 max-w-2xl text-base md:text-lg text-(--gray-700) text-center leading-8;
 }
 
 .hero-buttons {
-    @apply flex flex-row justify-center sm:justify-start gap-5 mt-10;
+    @apply flex flex-col sm:flex-row justify-start gap-3 mt-8;
 }
 
 .hero-button {
-    @apply inline-flex items-center justify-center gap-3 px-1.5 py-2 md:px-6 md:py-2.5 duration-300 ease-in-out;
+    @apply inline-flex min-h-12 items-center justify-center gap-3 px-5 py-3 rounded-lg text-sm md:text-base duration-200 ease-out font-semibold;
 }
 
 .button-view-projects {
-    @apply bg-(--color-primary) text-(--gray-50) rounded-lg cursor-pointer transition-transform;
+    @apply bg-(--gray-900) text-(--gray-50) cursor-pointer shadow-lg shadow-slate-900/10;
 }
 
 .button-download-cv {
-    @apply bg-transparent border-2 border-(--gray-900) text-(--gray-900) rounded-lg cursor-pointer transition-all;
+    @apply bg-white border border-(--gray-200) text-(--gray-900) cursor-pointer;
 }
 
-.button-view-projects:hover {
-    @apply -translate-y-0.75 shadow-md;
-}
-
+.button-view-projects:hover,
 .button-download-cv:hover {
-    @apply -translate-y-0.75 shadow-md bg-(--gray-900) text-(--gray-50);
+    @apply -translate-y-0.5 shadow-xl;
+}
+
+.hero-trust-row {
+    @apply mt-6 flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm text-(--gray-500);
+}
+
+.hero-trust-row span {
+    @apply inline-flex items-center gap-2;
+}
+
+.hero-trust-row span::before {
+    content: "";
+    @apply block w-2 h-2 rounded-full bg-(--color-secondary);
+}
+
+.hero-panel {
+    @apply relative w-full rounded-lg border border-white/80 bg-white/80 p-5 md:p-6 shadow-2xl shadow-slate-900/10 backdrop-blur-xl;
+}
+
+.hero-panel::before {
+    content: "";
+    @apply absolute inset-x-5 top-0 h-1 rounded-b-full bg-(--color-secondary);
+}
+
+.hero-panel-header {
+    @apply flex flex-col gap-2 pb-5 border-b border-(--gray-200);
+}
+
+.hero-panel-kicker {
+    @apply text-xs uppercase tracking-[0.18em] font-bold text-(--color-primary);
+}
+
+.hero-panel-header strong {
+    @apply text-3xl text-(--gray-900);
+}
+
+.hero-stats {
+    @apply grid grid-cols-1 gap-3 py-5;
+}
+
+.hero-stat {
+    @apply rounded-lg border border-(--gray-200) bg-(--gray-50) p-4;
+}
+
+.hero-stat strong {
+    @apply block text-2xl text-(--gray-900);
+}
+
+.hero-stat span {
+    @apply mt-1 block text-sm text-(--gray-500);
+}
+
+.hero-panel-note {
+    @apply flex gap-3 rounded-lg bg-(--gray-900) p-4 text-sm leading-6 text-(--gray-200);
+}
+
+.hero-panel-note span {
+    @apply mt-2 h-2 w-2 shrink-0 rounded-full bg-(--color-secondary);
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        @apply text-4xl;
+    }
 }

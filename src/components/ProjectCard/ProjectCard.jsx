@@ -46,7 +46,7 @@ export default function ProjectCard({
             </a>
           ) : (
             <span className="project-overlay-disabled" aria-disabled="true">
-              Project coming soon
+              { translations[lang].projectCard.comingSoon }
             </span>
           )}
         </div>

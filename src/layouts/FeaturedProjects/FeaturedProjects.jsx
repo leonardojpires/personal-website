@@ -12,7 +12,11 @@ export default function FeaturedProjects() {
 
     return (
         <section id="featured-projects" className="featured-projects-section" aria-labelledby="featured-projects-title">
-            <h2 className="featured-projects-title font-headline" id="featured-projects-title">{ translations[lang].featuredProjects.title }</h2>
+            <div className="featured-projects-heading">
+                <span className="section-eyebrow font-body">{ translations[lang].featuredProjects.eyebrow }</span>
+                <h2 className="featured-projects-title font-headline" id="featured-projects-title">{ translations[lang].featuredProjects.title }</h2>
+                <p className="featured-projects-description font-body">{ translations[lang].featuredProjects.description }</p>
+            </div>
 
             <div className="featured-projects-container">
                 {featuredProjects.map((project) => (

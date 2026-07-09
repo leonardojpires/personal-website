@@ -1,10 +1,6 @@
 import "./index.css";
 import cvFile from "../../assets/CV/CV.pdf";
-import HeroCards from "../../components/HeroCard/HeroCards";
-import SnowBackground from "../../components/SnowBackground/SnowBackground";
-import { AiFillThunderbolt } from "react-icons/ai";
 import { FaRegClipboard } from "react-icons/fa";
-import { FaBookBookmark } from "react-icons/fa6";
 import { LuDownload } from "react-icons/lu";
 import { motion as Motion } from "framer-motion";
 import { translations } from "@/data/translations";
@@ -15,53 +11,79 @@ export default function Hero() {
 
   return (
     <section
-      className="hero-root pt-30 bg-linear-to-t from-gray-100 to-(--color-secondary)/20 flex justify-center min-h-screen"
+      className="hero-root"
       aria-labelledby="home-hero-title"
     >
-      <SnowBackground />
       <div className="hero-section">
         <Motion.div
-          className="w-full flex flex-col items-center text-center"
+          className="hero-copy"
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <span className="tracking-widest uppercase font-bold text-xs md:text-sm text-(--color-primary) font-body text-center bg-(--color-secondary)/10 px-3 py-1 rounded-full bg-clip-border">
+          <span className="section-eyebrow font-body">
             { translations[lang].hero.tagline }
           </span>
           <h1
-            className="font-bold text-5xl md:text-7xl text-(--gray-900) mt-5 font-headline"
+            className="hero-title font-headline"
             id="home-hero-title"
           >
             { translations[lang].hero.pre_title }
-            <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
+            <span>
               { translations[lang].hero.title }
             </span>
           </h1>
-          <p className="md:text-lg text-(--gray-500) mt-5 font-body md:w-2/3">
+          <p className="hero-description font-body">
               { translations[lang].hero.description }
           </p>
           <div className="hero-buttons font-bold">
-            <div className="hero-button button-view-projects flex gap-4">
+            <a className="hero-button button-view-projects" href="#featured-projects">
               <FaRegClipboard size={20}/> 
-              <a href="#featured-projects">
-                { translations[lang].hero.viewProjects }
-              </a>
-            </div>
+              { translations[lang].hero.viewProjects }
+            </a>
             
-            <div className="hero-button button-download-cv flex gap-4">
+            <a
+              className="hero-button button-download-cv"
+              href={cvFile}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Leonardo Pires CV as PDF"
+            >
               <LuDownload size={20}/>
-              <a
-                href={cvFile}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Download Leonardo Pires CV as PDF"
-              >
-                { translations[lang].hero.downloadCV }
-              </a>
-            </div>
+              { translations[lang].hero.downloadCV }
+            </a>
+          </div>
+
+          <div className="hero-trust-row font-body" aria-label="Availability">
+            <span>{ translations[lang].hero.availability }</span>
+            <span>{ translations[lang].hero.response }</span>
           </div>
         </Motion.div>
+
+        {/* <Motion.aside
+          className="hero-panel"
+          initial={{ opacity: 0, x: 28 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
+          aria-label="Freelance highlights"
+        >
+          <div className="hero-panel-header">
+            <span className="hero-panel-kicker font-body">Portfolio snapshot</span>
+            <strong className="font-headline">Build, launch, refine.</strong>
+          </div>
+          <div className="hero-stats">
+            {translations[lang].hero.stats.map((stat) => (
+              <div className="hero-stat" key={stat.label}>
+                <strong className="font-headline">{stat.value}</strong>
+                <span className="font-body">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="hero-panel-note font-body">
+            <span />
+            <p>Dummy client note: focused on responsive builds, practical architecture, and launch-ready presentation.</p>
+          </div>
+        </Motion.aside> */}
       </div>
     </section>
   );

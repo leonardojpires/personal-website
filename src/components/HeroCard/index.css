@@ -17,7 +17,7 @@
 }
 
 .hero-card-grid {
-    @apply relative flex w-full min-h-[120px] gap-2 bg-(--gray-50)/95 border border-white/70 rounded-xl p-4 shadow-sm;
+    @apply relative flex w-full min-h-[170px] gap-3 bg-white border border-(--gray-200) rounded-lg p-5 shadow-sm;
 }
 
 .hero-card-grid > span:first-child {
@@ -25,9 +25,9 @@
 }
 
 .hero-card-grid .hero-card-title {
-    @apply mt-1 text-lg md:text-xl text-(--gray-900);
+    @apply mt-1 text-lg text-(--gray-900);
 }
 
 .hero-card-grid .hero-card-description {
-    @apply mt-1 text-xs md:text-sm text-(--gray-700) leading-relaxed font-medium;
+    @apply mt-2 text-sm text-(--gray-700) leading-6 font-medium;
 }

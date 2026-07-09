@@ -4,7 +4,7 @@ import "./index.css";
 export default function SkillsCard({ icon: Icon, title, skills }) {
   return (
     <article className="about-skill" aria-label={title}>
-      <div className="flex flex-col items-center gap-4 mb-4 text-center">
+      <div className="flex flex-col items-start gap-4 mb-4 text-left">
           <span aria-hidden="true">
             {Icon ? createElement(Icon) : null}
           </span>

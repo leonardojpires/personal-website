@@ -1,11 +1,10 @@
 import "./index.css";
-import personalImage2 from "../../../public/imgs/hero/personal_picture_2.webp";
 import { motion as Motion } from "framer-motion";
 import HeroCards from "./../../components/HeroCard/HeroCards";
 import {
   IoBriefcase,
 } from "react-icons/io5";
-import { IoIosBookmarks, IoIosGitNetwork } from "react-icons/io";
+import { IoIosBookmarks } from "react-icons/io";
 import { MdComputer } from "react-icons/md";
 import { translations } from "@/data/translations";
 import { useLanguage } from "@/context/useLanguage";
@@ -21,8 +20,11 @@ export default function Presentation() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
       >
+        <span className="section-eyebrow font-body">
+          {translations[lang].presentation.eyebrow}
+        </span>
         <h2 className="presentation-title font-headline">
-          Leonardo Pires
+          {translations[lang].presentation.title}
         </h2>
         <p className="presentation-description font-body">
           { translations[lang].presentation.description }
@@ -78,39 +80,37 @@ export default function Presentation() {
       </Motion.div>
 
       <Motion.div
-        className="presentation-image"
-        initial={{
-          opacity: 0,
-          x: 32,
-          y: 8,
-          scale: 0.96,
-          rotate: 0.8,
-          filter: "blur(6px)",
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          rotate: 0,
-          filter: "blur(0px)",
-        }}
-        whileHover={{ y: -4, scale: 1.01 }}
-        transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
+        className="presentation-methodology"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="presentation-image-shell">
-          <span className="presentation-image-glow" aria-hidden="true" />
-          <span className="presentation-image-ring" aria-hidden="true" />
-          <span
-            className="presentation-image-code-overlay"
-            aria-hidden="true"
-          />
-          <img
-            src={personalImage2}
-            alt="Leonardo Pires"
-            className="presentation-image-photo"
-          />
+        <div className="presentation-methodology-heading">
+          <span className="presentation-methodology-eyebrow font-body">
+            {translations[lang].presentation.methodology.eyebrow}
+          </span>
+          <h3 className="presentation-methodology-title font-headline">
+            {translations[lang].presentation.methodology.title}
+          </h3>
+          <p className="presentation-methodology-description font-body">
+            {translations[lang].presentation.methodology.description}
+          </p>
         </div>
+
+        <ol className="presentation-methodology-list font-body">
+          {translations[lang].presentation.methodology.steps.map((step, index) => (
+            <li className="presentation-methodology-step" key={step.title}>
+              <span className="presentation-methodology-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h4 className="font-headline">{step.title}</h4>
+                <p>{step.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </Motion.div>
     </section>
   );

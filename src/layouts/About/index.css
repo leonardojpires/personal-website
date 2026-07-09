@@ -1,33 +1,29 @@
 @import "tailwindcss";
 
 .about-section {
-    @apply flex flex-col items-center justify-center mt-20 py-12 bg-gray-100;
+    @apply flex flex-col items-center justify-center py-16 bg-white;
 }
 
 .about-container {
-    @apply flex flex-col items-center justify-center px-4;
+    @apply w-full max-w-[1180px] flex flex-col items-start justify-center px-4 md:px-10;
 }
 
 .about-title {
-    @apply text-3xl text-(--gray-900) font-bold;
-}
-
-.about-subtitle {
-    @apply text-2xl text-(--gray-900) font-semibold mb-4;
+    @apply mt-4 text-3xl md:text-5xl text-(--gray-900) font-black leading-tight;
 }
 
 .about-description {
-    @apply text-lg text-(--gray-700) max-w-2xl text-center mt-4 mb-8;
+    @apply text-base md:text-lg text-(--gray-700) max-w-3xl mt-4 mb-10 leading-8;
 }
 
 .about-skills {
-    @apply flex flex-wrap flex-row justify-center items-stretch gap-7;
+    @apply w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4;
 }
 
 .about-key-points {
-    @apply flex flex-wrap flex-row justify-center items-stretch gap-7 mt-10;
+    @apply w-full grid grid-cols-1 md:grid-cols-3 gap-4 mt-10;
 }
 
 .about-key-point-item {
-    @apply w-72 flex;
+    @apply flex;
 }

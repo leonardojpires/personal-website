@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Bottom Section - Socials & Copyright */}
         <div className="footer-bottom">
           <p className="footer-copyright font-body">
-            © {currentYear} { translations[lang].footer.copyright }.
+            &copy; {currentYear} { translations[lang].footer.copyright }
           </p>
 
           <div className="footer-socials">

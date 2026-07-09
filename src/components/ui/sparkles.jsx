@@ -1,6 +1,6 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react"
 import { loadSlim } from "@tsparticles/slim"
-import { motion, useAnimation } from "framer-motion"
+import { motion as Motion, useAnimation } from "framer-motion"
 import { useEffect, useId, useState } from "react"
 import { cn } from "@/lib/utils"
 
@@ -30,7 +30,7 @@ export const SparklesCore = (props) => {
 
   const generatedId = useId()
   return (
-    <motion.div animate={controls} className={cn("opacity-0", className)}>
+    <Motion.div animate={controls} className={cn("opacity-0", className)}>
       {init && (
         <Particles
           className={cn("h-full w-full")}
@@ -406,7 +406,7 @@ export const SparklesCore = (props) => {
           }}
           particlesLoaded={particlesLoaded} />
       )}
-    </motion.div>
+    </Motion.div>
   );
 }
 

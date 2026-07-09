@@ -7,46 +7,46 @@ const keyPointsData = {
     {
       id: 1,
       icon: FaLightbulb,
-      title: "Innovative Problem Solver",
+      title: "Product clarity",
       description:
-        "I'm constantly exploring new technologies and approaches to build effective and creative solutions that push boundaries",
+        "I help turn vague ideas into useful scope, clear priorities, and a first version that can actually ship.",
     },
     {
       id: 2,
       icon: FaPencilRuler,
-      title: "Detail-Oriented Developer",
+      title: "Professional presentation",
       description:
-        "Every line of code I write is thoughtfully crafted to ensure high performance, maintainability, and scalability, reflecting my commitment to quality and excellence",
+        "Interfaces are built to feel credible, responsive, readable, and easy for real users to understand.",
     },
     {
       id: 3,
       icon: GrPerformance,
-      title: "Performance Driven Programmer",
+      title: "Maintainable delivery",
       description:
-        "I build applications with a focus on performance, ensuring fast load times, secure data handling and a proper code structure that delivers total effectiveness in the application",
+        "The codebase is structured for future edits, practical handoff, and smoother improvements after launch.",
     },
   ],
   pt: [
     {
       id: 1,
       icon: FaLightbulb,
-      title: "Inovador na Resolução de Problemas",
+      title: "Clareza de produto",
       description:
-        "Estou constantemente a explorar novas tecnologias e abordagens para construir soluções efetivas e criativas que ultrapassam limites",
+        "Ajudo a transformar ideias vagas em escopo util, prioridades claras e uma primeira versao pronta para lancar.",
     },
     {
       id: 2,
       icon: FaPencilRuler,
-      title: "Desenvolvedor Detalhista",
+      title: "Apresentacao profissional",
       description:
-        "Cada linha de código que eu escrevo é cuidadosamente escrita para garantir máxima performance, manutenibilidade e escalabilidade, refletindo o meu compromisso com qualidade e excelência",
+        "As interfaces sao pensadas para parecerem crediveis, responsivas, legiveis e faceis de usar.",
     },
     {
       id: 3,
       icon: GrPerformance,
-      title: "Programador Focado em Performance",
+      title: "Entrega sustentavel",
       description:
-        "Eu construo aplicações web com foco em performance, garantindo tempos de resposta rápidos, tratamento seguro dos dados e uma estrutura de código adequada que proporciona operacionalidade na aplicação",
+        "O codigo e organizado para futuras alteracoes, handoff pratico e melhorias depois do lancamento.",
     },
   ],
 };

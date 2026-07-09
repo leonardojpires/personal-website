@@ -12,10 +12,8 @@ export default function About() {
   return (
     <section id="about" className="about-section" aria-labelledby="about-title">
       <div className="about-container">
+        <span className="section-eyebrow font-body">{ translations[lang].about.eyebrow }</span>
         <h2 className="about-title font-headline" id="about-title">{ translations[lang].about.sectionTitle }</h2>
-        {/* <span className="about-subtitle font-body">
-          Turning Ideas Into Code
-        </span> */}
         <p className="about-description font-body">
           { translations[lang].about.description }
         </p>
