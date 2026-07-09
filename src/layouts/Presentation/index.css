@@ -26,13 +26,17 @@
 }
 
 .presentation-methodology {
-    @apply w-full rounded-lg border border-(--gray-200) bg-white p-5 md:p-6 shadow-xl shadow-slate-900/5;
+    @apply relative w-full overflow-hidden rounded-lg border border-(--gray-200) bg-white p-5 md:p-6 shadow-xl shadow-slate-900/5;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 58%, rgba(240, 253, 250, 0.8) 100%);
 }
 
+.presentation-methodology-accent {
+    @apply absolute right-[-4rem] top-[-6rem] h-48 w-48 rounded-full bg-(--color-secondary)/12 blur-3xl will-change-transform;
+}
+
 .presentation-methodology-heading {
-    @apply flex flex-col gap-3 pb-5 border-b border-(--gray-200);
+    @apply relative flex flex-col gap-3 pb-5 border-b border-(--gray-200);
 }
 
 .presentation-methodology-eyebrow {
@@ -48,7 +52,7 @@
 }
 
 .presentation-methodology-list {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-5;
+    @apply relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-5;
 }
 
 .presentation-methodology-step {

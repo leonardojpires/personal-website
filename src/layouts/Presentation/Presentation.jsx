@@ -1,5 +1,6 @@
 import "./index.css";
-import { motion as Motion } from "framer-motion";
+import { motion as Motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import HeroCards from "./../../components/HeroCard/HeroCards";
 import {
   IoBriefcase,
@@ -11,6 +12,14 @@ import { useLanguage } from "@/context/useLanguage";
 
 export default function Presentation() {
   const { lang } = useLanguage();
+  const methodologyRef = useRef(null);
+  const prefersReducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: methodologyRef,
+    offset: ["start end", "end start"],
+  });
+  const delayedXRaw = useTransform(scrollYProgress, [0, 1], [-18, 18]);
+  const delayedX = useSpring(delayedXRaw, { stiffness: 60, damping: 22, mass: 0.7 });
 
   return (
     <section className="presentation-section">
@@ -80,12 +89,18 @@ export default function Presentation() {
       </Motion.div>
 
       <Motion.div
+        ref={methodologyRef}
         className="presentation-methodology"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
+        <Motion.span
+          className="presentation-methodology-accent"
+          style={{ x: prefersReducedMotion ? 0 : delayedX }}
+          aria-hidden="true"
+        />
         <div className="presentation-methodology-heading">
           <span className="presentation-methodology-eyebrow font-body">
             {translations[lang].presentation.methodology.eyebrow}

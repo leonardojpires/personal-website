@@ -6,6 +6,23 @@
         linear-gradient(135deg, rgba(248, 250, 252, 0.98) 0%, rgba(239, 246, 255, 0.92) 50%, rgba(240, 253, 250, 0.86) 100%);
 }
 
+.hero-particles-layer {
+    @apply absolute -inset-x-8 -inset-y-20 z-0 pointer-events-none;
+    opacity: 0.72;
+}
+
+.hero-depth-layer {
+    @apply absolute pointer-events-none rounded-full blur-3xl z-0;
+}
+
+.hero-depth-layer-one {
+    @apply w-72 h-72 md:w-[30rem] md:h-[30rem] -left-28 top-24 bg-(--color-primary)/10;
+}
+
+.hero-depth-layer-two {
+    @apply w-64 h-64 md:w-[24rem] md:h-[24rem] -right-24 bottom-16 bg-(--color-secondary)/12;
+}
+
 .hero-root::before {
     content: "";
     position: absolute;
@@ -16,10 +33,11 @@
         linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
     background-size: 42px 42px;
     mask-image: linear-gradient(180deg, black 0%, transparent 82%);
+    z-index: 1;
 }
 
 .hero-section {
-    @apply relative z-10 w-full max-w-[1200px] flex justify-center items-center gap-10;
+    @apply relative z-10 w-full max-w-[1200px] flex justify-center items-center gap-10 will-change-transform;
 }
 
 .hero-copy {

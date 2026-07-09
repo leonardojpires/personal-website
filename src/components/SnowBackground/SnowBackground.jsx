@@ -7,11 +7,11 @@ export default function SnowBackground() {
       <SparklesCore
         className="snow-canvas"
         background="transparent"
-        minSize={0.7}
-        maxSize={2}
-        particleDensity={100}
-        speed={1.5}
-        particleColor="#7c8cff"
+        minSize={0.75}
+        maxSize={1.75}
+        particleDensity={72}
+        speed={0.85}
+        particleColor="#1d4ed8"
       />
       <div className="snow-vignette" />
     </div>

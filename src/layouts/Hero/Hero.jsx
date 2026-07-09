@@ -2,19 +2,54 @@ import "./index.css";
 import cvFile from "../../assets/CV/CV.pdf";
 import { FaRegClipboard } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
-import { motion as Motion } from "framer-motion";
+import { motion as Motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { translations } from "@/data/translations";
 import { useLanguage } from "@/context/useLanguage";
+import SnowBackground from "@/components/SnowBackground/SnowBackground";
 
 export default function Hero() {
   const { lang } = useLanguage();
+  const heroRef = useRef(null);
+  const prefersReducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const particleYRaw = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const copyYRaw = useTransform(scrollYProgress, [0, 1], [0, -28]);
+  const particleY = useSpring(particleYRaw, { stiffness: 70, damping: 24, mass: 0.6 });
+  const copyY = useSpring(copyYRaw, { stiffness: 80, damping: 26, mass: 0.55 });
 
   return (
     <section
+      ref={heroRef}
       className="hero-root"
       aria-labelledby="home-hero-title"
     >
-      <div className="hero-section">
+      <Motion.div
+        className="hero-particles-layer"
+        style={{ y: prefersReducedMotion ? 0 : particleY }}
+        aria-hidden="true"
+      >
+        <SnowBackground />
+      </Motion.div>
+
+      <Motion.div
+        className="hero-depth-layer hero-depth-layer-one"
+        style={{ y: prefersReducedMotion ? 0 : particleY }}
+        aria-hidden="true"
+      />
+      <Motion.div
+        className="hero-depth-layer hero-depth-layer-two"
+        style={{ y: prefersReducedMotion ? 0 : copyY }}
+        aria-hidden="true"
+      />
+
+      <Motion.div
+        className="hero-section"
+        style={{ y: prefersReducedMotion ? 0 : copyY }}
+      >
         <Motion.div
           className="hero-copy"
           initial={{ opacity: 0, x: -24 }}
@@ -84,7 +119,7 @@ export default function Hero() {
             <p>Dummy client note: focused on responsive builds, practical architecture, and launch-ready presentation.</p>
           </div>
         </Motion.aside> */}
-      </div>
+      </Motion.div>
     </section>
   );
 }
