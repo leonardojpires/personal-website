@@ -29,3 +29,31 @@
 .cta-button:hover {
     @apply -translate-y-0.5 shadow-xl;
 }
+
+@media (min-width: 1700px) {
+    .cta-section {
+        @apply my-24 px-8;
+    }
+
+    .cta-container {
+        @apply max-w-[1480px] px-12 py-20;
+    }
+
+    .cta-title {
+        @apply max-w-4xl text-6xl;
+    }
+
+    .cta-description {
+        @apply max-w-4xl text-xl leading-9;
+    }
+
+    .cta-button {
+        @apply px-8 py-4 text-lg;
+    }
+}
+
+@media (min-width: 2200px) {
+    .cta-container {
+        @apply max-w-[1640px];
+    }
+}

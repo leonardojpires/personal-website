@@ -79,3 +79,55 @@
 .presentation-methodology-step p {
     @apply mt-3 text-sm leading-6 text-(--gray-700);
 }
+
+@media (min-width: 1700px) {
+    .presentation-section {
+        @apply max-w-[1480px] px-8 mt-28 gap-12;
+    }
+
+    .presentation-title {
+        @apply max-w-4xl text-6xl;
+    }
+
+    .presentation-description {
+        @apply max-w-4xl text-xl leading-9;
+    }
+
+    .presentation-grid {
+        @apply gap-6;
+    }
+
+    .presentation-methodology {
+        @apply p-8;
+    }
+
+    .presentation-methodology-title {
+        @apply text-4xl;
+    }
+
+    .presentation-methodology-description {
+        @apply max-w-4xl text-lg leading-8;
+    }
+
+    .presentation-methodology-list {
+        @apply gap-6 mt-7;
+    }
+
+    .presentation-methodology-step {
+        @apply min-h-56 p-5;
+    }
+
+    .presentation-methodology-step h4 {
+        @apply text-xl;
+    }
+
+    .presentation-methodology-step p {
+        @apply text-base leading-7;
+    }
+}
+
+@media (min-width: 2200px) {
+    .presentation-section {
+        @apply max-w-[1640px];
+    }
+}

@@ -27,3 +27,25 @@
 .about-skill-list li {
     @apply text-sm text-(--gray-700) leading-6;
 }
+
+@media (min-width: 1700px) {
+    .about-skill {
+        @apply min-h-80 p-6;
+    }
+
+    .about-skill span {
+        @apply text-4xl;
+    }
+
+    .about-skill h3 {
+        @apply text-xl;
+    }
+
+    .about-skill-list {
+        @apply gap-2.5;
+    }
+
+    .about-skill-list li {
+        @apply text-base leading-7;
+    }
+}

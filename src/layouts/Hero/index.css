@@ -140,3 +140,43 @@
         @apply text-4xl;
     }
 }
+
+@media (min-width: 1700px) {
+    .hero-root {
+        @apply px-8;
+    }
+
+    .hero-section {
+        @apply max-w-[1480px];
+    }
+
+    .hero-title {
+        @apply max-w-6xl text-8xl;
+    }
+
+    .hero-description {
+        @apply max-w-3xl text-xl leading-9;
+    }
+
+    .hero-buttons {
+        @apply mt-10 gap-4;
+    }
+
+    .hero-button {
+        @apply min-h-14 px-7 py-4 text-lg;
+    }
+
+    .hero-trust-row {
+        @apply mt-7 text-base;
+    }
+}
+
+@media (min-width: 2200px) {
+    .hero-section {
+        @apply max-w-[1640px];
+    }
+
+    .hero-title {
+        font-size: 7rem;
+    }
+}

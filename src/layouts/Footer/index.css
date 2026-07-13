@@ -107,3 +107,37 @@
     @apply my-6;
   }
 }
+
+@media (min-width: 1700px) {
+  .footer {
+    @apply pt-16 pb-10;
+  }
+
+  .footer-container {
+    @apply max-w-[1480px] px-8;
+  }
+
+  .footer-logo {
+    @apply text-2xl;
+  }
+
+  .footer-tagline,
+  .footer-link,
+  .footer-copyright {
+    @apply text-base;
+  }
+
+  .footer-column-title {
+    @apply text-base;
+  }
+
+  .social-link {
+    @apply w-11 h-11;
+  }
+}
+
+@media (min-width: 2200px) {
+  .footer-container {
+    @apply max-w-[1640px];
+  }
+}

@@ -80,3 +80,33 @@
 .project-links-link {
     @apply text-sm text-(--gray-900) bg-(--gray-50) border border-(--gray-200) px-4 py-2 rounded-lg font-semibold hover:bg-(--gray-900) hover:text-white transition-colors flex items-center gap-2;
 }
+
+@media (min-width: 1700px) {
+    .project-card {
+        @apply min-h-[580px];
+    }
+
+    .project-content {
+        @apply p-8;
+    }
+
+    .project-type {
+        @apply text-xs;
+    }
+
+    .project-title {
+        @apply text-3xl;
+    }
+
+    .project-description {
+        @apply text-base leading-7;
+    }
+
+    .project-technology {
+        @apply text-sm px-3 py-1.5;
+    }
+
+    .project-links-link {
+        @apply text-base px-5 py-2.5;
+    }
+}

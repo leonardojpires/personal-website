@@ -31,3 +31,17 @@
 .hero-card-grid .hero-card-description {
     @apply mt-2 text-sm text-(--gray-700) leading-6 font-medium;
 }
+
+@media (min-width: 1700px) {
+    .hero-card-grid {
+        @apply min-h-[210px] gap-4 p-6;
+    }
+
+    .hero-card-grid .hero-card-title {
+        @apply text-xl;
+    }
+
+    .hero-card-grid .hero-card-description {
+        @apply text-base leading-7;
+    }
+}

@@ -27,3 +27,32 @@
 .about-key-point-item {
     @apply flex;
 }
+
+@media (min-width: 1700px) {
+    .about-section {
+        @apply py-20;
+    }
+
+    .about-container {
+        @apply max-w-[1480px] px-8;
+    }
+
+    .about-title {
+        @apply text-6xl;
+    }
+
+    .about-description {
+        @apply max-w-4xl text-xl leading-9 mb-12;
+    }
+
+    .about-skills,
+    .about-key-points {
+        @apply gap-6;
+    }
+}
+
+@media (min-width: 2200px) {
+    .about-container {
+        @apply max-w-[1640px];
+    }
+}

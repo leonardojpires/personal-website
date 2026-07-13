@@ -135,6 +135,13 @@ body::selection {
   text-transform: uppercase;
 }
 
+@media (min-width: 1700px) {
+  .section-eyebrow {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;

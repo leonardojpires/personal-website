@@ -27,3 +27,37 @@
 .featured-projects-link:hover {
     @apply -translate-y-0.5 shadow-xl;
 }
+
+@media (min-width: 1700px) {
+    .featured-projects-section {
+        @apply mt-28 py-20;
+    }
+
+    .featured-projects-heading,
+    .featured-projects-container {
+        @apply max-w-[1480px] px-8;
+    }
+
+    .featured-projects-title {
+        @apply text-6xl;
+    }
+
+    .featured-projects-description {
+        @apply max-w-3xl text-xl leading-9;
+    }
+
+    .featured-projects-container {
+        @apply gap-8 mt-12;
+    }
+
+    .featured-projects-link {
+        @apply px-8 py-4 text-lg;
+    }
+}
+
+@media (min-width: 2200px) {
+    .featured-projects-heading,
+    .featured-projects-container {
+        @apply max-w-[1640px];
+    }
+}

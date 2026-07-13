@@ -19,3 +19,21 @@
 .key-points-description {
     @apply text-(--gray-700) mt-4 leading-7 text-sm;
 }
+
+@media (min-width: 1700px) {
+    .key-points-card {
+        @apply min-h-72 p-7;
+    }
+
+    .key-points-icon {
+        @apply text-4xl;
+    }
+
+    .key-points-title {
+        @apply text-2xl;
+    }
+
+    .key-points-description {
+        @apply text-base leading-8;
+    }
+}
